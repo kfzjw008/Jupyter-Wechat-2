@@ -1,13 +1,57 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/Realtime_Data/Main",
+    "pages/Knowledge_Contest/Main",
+    "pages/Astronomical_Query/Main",
+    "pages/Home_Page/Main"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于你所在位置的天文实时数据的获取"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#3763BA",
+    "navigationBarTitleText": "星云村",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#3763BA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "Resource/image/11.png",
+        "iconPath": "Resource/image/10.png",
+        "pagePath": "pages/Realtime_Data/Main",
+        "text": "实时数据"
+      },
+      {
+        "selectedIconPath": "Resource/image/21.png",
+        "iconPath": "Resource/image/20.png",
+        "pagePath": "pages/Knowledge_Contest/Main",
+        "text": "知识问答"
+      },
+      {
+        "selectedIconPath": "Resource/image/31.png",
+        "iconPath": "Resource/image/30.png",
+        "pagePath": "pages/Astronomical_Query/Main",
+        "text": "天文查询"
+      },
+      {
+        "selectedIconPath": "Resource/image/42.png",
+        "iconPath": "Resource/image/40.png",
+        "pagePath": "pages/Home_Page/Main",
+        "text": "我的主页"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

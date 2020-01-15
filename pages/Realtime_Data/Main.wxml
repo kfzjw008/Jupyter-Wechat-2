@@ -1,0 +1,67 @@
+<view class="cu-load bg-bluee {{!isLoad?'loading':'over'}}" hidden='{{hid}}'></view>
+<view class="cu-load bg-red erro" hidden='{{hid2}}'></view>
+<view class='UCenter-bg' style="background-image: url({{jpg}});">
+  <view class='space'>
+    <view class="stars ">
+      <view class="star "></view>
+      <view class="star pink "></view>
+      <view class="star blue "></view>
+      <view class="star yellow "></view>
+    </view>
+  </view>
+  <view class='margin-top-sm' style='margin-bottom:50px'>
+    <text style='font-size:15px ;color:#FFFFFF;text-align:center;line-height:0.6em;'>观测适宜度</text>
+  </view>
+  <text style='font-size:100px ;color:#FFFFFF;padding:0rpx;line-height:0.95em;'>{{P0}}</text>
+  <view style='font-size:18px ;color:#FFFFFF;text-align:center;margin-bottom:60px'>{{q1}}</view>
+  <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+</view>
+    <view class="flex">
+      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn3" bindtap="gotoPage1">
+     <text class='icon-location text-gray'></text> {{locat}}</button></view>
+      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn3" bindtap="fresh" disabled="{{diss}}">
+      <text class='icon-refresh text-gray'></text> 刷新</button></view>
+    </view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''>
+  <view class="cu-item ">
+    <text class='text-grey' style='text-align:left'>经度</text>
+    <text class='text-grey' style='text-align:right'>{{jd}}</text>
+  </view>
+  <view class="cu-item">
+    <text class='text-grey' style='text-align:left'>纬度</text>
+    <text class='text-grey' style='text-align:right'>{{wd}}</text>
+  </view>
+  <view class="cu-item">
+    <text class='text-grey' style='text-align:left'>云量：{{cloudcover}}</text>
+    <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{scloudcover}}</text>
+  </view>
+  <view class="cu-item ">
+    <text class='text-grey ' style='text-align:left'>大气视宁度：{{seeing}}</text>
+    <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{sseeing}}</text>
+  </view>
+  <view class="cu-item ">
+    <text class='text-grey' style='text-align:left'>大气透明度：{{transparency}}</text>
+    <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{strans}}</text>
+  </view>
+  <view class="cu-item ">
+    <text class='text-grey' style='text-align:left'>抬升指数：{{lifted_index}}</text>
+    <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{slifted}}</text>
+  </view>
+  <view class="cu-item ">
+    <text class='text-grey' style='text-align:left'>温度</text>
+    <text class='text-gray' style='text-align:right'>{{temp2m}}°C</text>
+  </view>
+  <view class="cu-item ">
+    <text class='text-grey' style='text-align:left'>体感温度</text>
+    <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{temp}}°C</text>
+  </view>
+</view>
+
+    <view class="flex">
+      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn1" hover-class='btn-hover' bindtap="gotoPage3"> 变化趋势</button></view>
+      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn2" hover-class='btn-hover' bindtap="gotoPage6">观测建议</button></view>
+    </view>
+
+<!-- 广告代码，后期用于流量主  -->
+<!-- <ad unit-id="adunit-47419d0a0aa17c4c" ad-intervals="30"></ad>  -->

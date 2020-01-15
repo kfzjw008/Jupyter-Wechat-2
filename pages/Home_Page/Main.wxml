@@ -1,0 +1,142 @@
+<!--pages/my/index.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <open-data wx:if="{{islogin==true}}" type="userAvatarUrl" style="width: 70px; height: 70px; display: block"  mode="widthFix"></open-data>
+  <button  wx:if="{{islogin==false}}" class="cu-btn bg-gray lg shadow"   open-type="getUserInfo" lang="zh_CN"   bindgetuserinfo="onGotUserInfo" >微信登录</button>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-global text-blue'></view>
+
+</view>
+    <view class="text-xl"  wx:if="{{islogin==true}}"   ><open-data type="userNickName"></open-data>
+     
+    </view>
+    <view  wx:if="{{islogin==true}}" class="margin-top-sm">
+      <open-data type="userCity" lang="zh_CN"></open-data>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl  text-blue">{{a1}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-edit"></text> 已做题数</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-green ">{{a2}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-roundcheck"></text> 正确题数</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl  text-orange">{{a3}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-roundclose"></text> 今日已做</view>
+    </view>
+  </view>
+
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="gg/gg" hover-class="none">
+        <text class="cuIcon-notificationfill text-blue"></text>
+        <text class="text-grey">通知公告</text>
+      </navigator>
+ 
+    </view>
+
+
+
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <view class="content" bindtap='kt' >
+        <text class="cuIcon-post  text-grey"></text>
+        <text class="text-grey">修改资料</text>
+      </view>
+
+    </view>
+
+  <view class="cu-item arrow" style='min-height:90rpx'>
+      <view class="content" bindtap='url' >
+        <text class="cuIcon-card text-blue"></text>
+        <text class="text-grey">身份认证</text>
+      </view>
+          <view class="action">
+        <text class="text-grey text-sm">高校天文协会会员认证</text>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="../qa/jl/index" hover-class="none">
+        <text class="cuIcon-rank text-blue"></text>
+        <text class="text-grey">数据统计</text>
+      </navigator>
+ 
+    </view>
+
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="../qa/jl/index" hover-class="none">
+        <text class="cuIcon-rank text-blue"></text>
+        <text class="text-grey">我的积分</text>
+      </navigator>
+ 
+    </view>
+
+
+  </view>
+
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+
+
+
+
+     <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="sz/sz" hover-class="none">
+        <text class="cuIcon-settings  text-gray"></text>
+        <text class="text-grey">设置与反馈</text>
+      </navigator>
+     
+    </view>
+
+    
+  
+
+
+
+     <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="qa/qa" hover-class="none">
+        <text class="cuIcon-question text-red"></text>
+        <text class="text-grey">常见问题</text>
+      </navigator>
+    </view>
+
+
+     <view class="cu-item arrow" style='min-height:90rpx'>
+      <navigator class="content" url="about/about" hover-class="none">
+        <text class="cuIcon-news text-blue"></text>
+        <text class="text-grey">关于我们</text>
+      </navigator>
+    </view>
+
+  </view>
+
+
+
+
+
+
+
+  <view class="cu-tabbar-height"></view>
+</scroll-view>
+  <ad unit-id="adunit-b8072ed672f5d5bb"></ad>
+
+
