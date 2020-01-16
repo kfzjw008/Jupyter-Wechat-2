@@ -26,11 +26,11 @@
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''>
   <view class="cu-item ">
     <text class='text-grey' style='text-align:left'>经度</text>
-    <text class='text-grey' style='text-align:right'>{{jd}}</text>
+    <text class='text-grey' style='text-align:right'>{{lon}}</text>
   </view>
   <view class="cu-item">
     <text class='text-grey' style='text-align:left'>纬度</text>
-    <text class='text-grey' style='text-align:right'>{{wd}}</text>
+    <text class='text-grey' style='text-align:right'>{{lat}}</text>
   </view>
   <view class="cu-item">
     <text class='text-grey' style='text-align:left'>云量：{{cloudcover}}</text>
@@ -48,12 +48,9 @@
     <text class='text-grey' style='text-align:left'>抬升指数：{{lifted_index}}</text>
     <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{slifted}}</text>
   </view>
+
   <view class="cu-item ">
     <text class='text-grey' style='text-align:left'>温度</text>
-    <text class='text-gray' style='text-align:right'>{{temp2m}}°C</text>
-  </view>
-  <view class="cu-item ">
-    <text class='text-grey' style='text-align:left'>体感温度</text>
     <text class='text' style='text-align:right;color:#3763BA ;font-weight:bolder'>{{temp}}°C</text>
   </view>
 </view>

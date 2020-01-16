@@ -6,14 +6,12 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    Main_Server:"http://localhost:8080",//主请求服务器
+    LON:"116.2",//经度
+    LAT:"39.9",//纬度
+    inp:1
   }
 })
