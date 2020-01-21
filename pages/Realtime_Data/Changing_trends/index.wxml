@@ -1,0 +1,114 @@
+<!--pages/index/qs/index.wxml-->
+<view class="cu-load bg-bluee {{!isLoad?'loading':'over'}}" hidden='{{hid}}'></view>
+<view class="cu-load bg-red erro" hidden='{{hid2}}'></view>
+
+
+<view class='margin-sm bg-white padding-sm radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>变化趋势图</view>
+  <view class='text-content'>
+    <view>查看60小时(H)观测适宜度变化趋势。</view>
+    <canvas canvas-id="lineCanvas" style="margin-left:auto; margin-right:auto;width: 95%; height: 150px;"></canvas>
+  </view>
+</view>
+
+<view class='margin-sm bg-white  radius shadow-lg' style=' padding: 10rpx;'>
+  <view class='text-center margin-bottom text-lg  text-grey'>变化趋势表</view>
+  <view class='text-content'>
+    <view>查看60小时(H)观测适宜度详细变化情况。</view>
+
+    <view class="table">
+      <view class="tr">
+        <view class="th">日期</view>
+        <view class="th">适宜度</view>
+        <view class="th">日期</view>
+        <view class="th">适宜度</view>
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_3tomorrow}}-{{D_3tomorrow}} {{h_3tomorrow}}:{{m_3tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P0}}</view>
+        <view class="td">{{M_33tomorrow}}-{{D_33tomorrow}} {{h_33tomorrow}}:{{m_33tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P10}}</view>
+
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_6tomorrow}}-{{D_6tomorrow}} {{h_6tomorrow}}:{{m_6tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P1}}</view>
+        <view class="td">{{M_36tomorrow}}-{{D_36tomorrow}} {{h_36tomorrow}}:{{m_36tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P11}}</view>
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_9tomorrow}}-{{D_9tomorrow}} {{h_9tomorrow}}:{{m_9tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P2}}</view>
+        <view class="td">{{M_39tomorrow}}-{{D_39tomorrow}} {{h_39tomorrow}}:{{m_39tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P12}}</view>
+
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_12tomorrow}}-{{D_12tomorrow}} {{h_12tomorrow}}:{{m_12tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P3}}</view>
+        <view class="td">{{M_42tomorrow}}-{{D_42tomorrow}} {{h_42tomorrow}}:{{m_42tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P13}}</view>
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_15tomorrow}}-{{D_15tomorrow}} {{h_15tomorrow}}:{{m_15tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P4}}</view>
+        <view class="td">{{M_45tomorrow}}-{{D_45tomorrow}} {{h_45tomorrow}}:{{m_45tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P14}}</view>
+
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_18tomorrow}}-{{D_18tomorrow}} {{h_18tomorrow}}:{{m_18tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P5}}</view>
+        <view class="td">{{M_48tomorrow}}-{{D_48tomorrow}} {{h_48tomorrow}}:{{m_48tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P15}}</view>
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_21tomorrow}}-{{D_21tomorrow}} {{h_21tomorrow}}:{{m_21tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P6}}</view>
+        <view class="td">{{M_51tomorrow}}-{{D_51tomorrow}} {{h_51tomorrow}}:{{m_51tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P16}}</view>
+
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_24tomorrow}}-{{D_24tomorrow}} {{h_24tomorrow}}:{{m_24tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P7}}</view>
+        <view class="td">{{M_54tomorrow}}-{{D_54tomorrow}} {{h_54tomorrow}}:{{m_54tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P17}}</view>
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_27tomorrow}}-{{D_27tomorrow}} {{h_27tomorrow}}:{{m_27tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P8}}</view>
+        <view class="td">{{M_57tomorrow}}-{{D_57tomorrow}} {{h_57tomorrow}}:{{m_57tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P18}}</view>
+
+
+      </view>
+      <view class="tr">
+        <view class="td">{{M_30tomorrow}}-{{D_30tomorrow}} {{h_30tomorrow}}:{{m_30tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P9}}</view>
+        <view class="td">{{M_60tomorrow}}-{{D_60tomorrow}} {{h_60tomorrow}}:{{m_60tomorrow}}</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P19}}</view>
+
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<view class="xm_banner" style="width:100%">
+  <xm-ad data-id="{{xmad.ad.banner}}" adData="{{xmad.adData}}" bindadload="adImgLoad" bindclick="appoIntView" bindclose="xmadClose" class="xm_component">
+  </xm-ad>
+</view>
+
+<button class="btn1" hover-class='btn-hover' bindtap="gotoPage2">返回</button>
+<ad unit-id="adunit-54afe418c2773515"></ad>

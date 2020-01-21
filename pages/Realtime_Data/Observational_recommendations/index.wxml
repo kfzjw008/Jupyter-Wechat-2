@@ -1,0 +1,60 @@
+<!--pages/index/qs/index.wxml-->
+
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>数值说明</view>
+  <view class="table">
+        <view class="tr">
+            <view class="th">观测适宜度</view>
+            <view class="th">评价</view>
+
+        </view>
+
+        <view class="tr" >
+            <view class="td" >0-55</view>
+            <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>不适宜观测</view>
+                 </view>
+         <view class="tr" >
+            <view class="td" >56-65</view>
+            <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>勉强可以观测</view>
+                 
+           </view>
+              <view class="tr" >
+            <view class="td" >66-80</view>
+            <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>可以观测</view>          
+           </view>
+              <view class="tr" >
+            <view class="td" >81-95</view>
+            <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>适合观测</view>
+           </view>
+              <view class="tr" >
+            <view class="td" >96-100</view>
+            <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>非常适合观测</view>
+           </view>
+        </view>
+
+</view>
+
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>名词解释</view>
+ <view ><span  style='color:#3763BA ;font-weight:bolder '   >云量</span></view>
+    <view >指云遮蔽天空视野的成数。</view>
+     <view ><span  style='color:#3763BA ;font-weight:bolder '   >大气视宁度</span></view>
+       <view>视宁度指望远镜显示图像的清晰度。它取决于大气湍流活动程度。</view>
+            <view ><span  style='color:#3763BA ;font-weight:bolder '   >大气透明度</span></view>
+              <view >电磁辐射透过大气的程度，为大气光学特性之一。为大气透过可见光性能优劣的参量，以透过光通量与入射光通量的比值表示。</view>
+ <view ><span  style='color:#3763BA ;font-weight:bolder '   >抬升指数</span></view>
+   <view >是一种表示对流性不稳定的指数。它表示5500米处实际大气温度被一个气块从地面出发，沿干绝热上升至抬升凝结高度后，再沿湿绝热线上升到500百帕（海拔5500米左右高度）处所具有的温度所减得到的差值。</view>
+</view>
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>原理解释</view>
+  <view class='text-content'>
+       <view >本观测适宜度的评价不仅仅考虑了常见的云量因素，同时考虑了空气污染、体感温度、大气不稳定度等其他外部因素，依据AHP层次分析法为各个因素赋权计算，从而多维度获得最终的观测适宜度评价结果。</view>
+  </view>
+</view>
+
+
+
+                <button class="btn1" hover-class='btn-hover' bindtap="gotoPage2" >返回</button>

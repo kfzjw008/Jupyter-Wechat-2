@@ -57,7 +57,7 @@
 
     <view class="flex">
       <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn1" hover-class='btn-hover' bindtap="gotoPage3"> 变化趋势</button></view>
-      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn2" hover-class='btn-hover' bindtap="gotoPage6">观测建议</button></view>
+      <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn2" hover-class='btn-hover' bindtap="gotoPage6">使用说明</button></view>
     </view>
 
 <!-- 广告代码，后期用于流量主  -->

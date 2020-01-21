@@ -30,6 +30,7 @@ Page({
       })
       interstitialAd.onClose(() => {})
     }
+
     var that = this
     wx.getLocation({
       type: 'wgs84',
@@ -50,13 +51,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
     if (interstitialAd) { //插屏广告
       console.log(interstitialAd)
       interstitialAd.show().catch((err) => {
@@ -72,7 +66,7 @@ Page({
       })
       wx.getLocation({
         type: 'wgs84',
-        success: function(res) {
+        success: function (res) {
           that.setData({
             lon: app.globalData.LON,
             lat: app.globalData.LAT,
@@ -99,7 +93,7 @@ Page({
                 lifted_index: '加载失败',
                 P0: "--",
               })
-              setTimeout(function() {
+              setTimeout(function () {
                 that.setData({
                   hid2: true
                 })
@@ -121,19 +115,22 @@ Page({
                 temp2m: '加载失败',
                 transparency: res.data.SAO_Result.P0.Transparency.Transparency_Value,
                 lifted_index: res.data.SAO_Result.P0.Lifted_Index.Lifted_Index_Value,
-                sseeing:res.data.SAO_Result.P0.Seeing.Explain,
+                sseeing: res.data.SAO_Result.P0.Seeing.Explain,
                 strans: res.data.SAO_Result.P0.Transparency.Explain,
                 slifted: res.data.SAO_Result.P0.Lifted_Index.Explain,
                 scloudcover: res.data.SAO_Result.P0.CloudCover.Explain,
                 temp: res.data.SAO_Result.P0.Temperature
               })
-              setTimeout(function() {
+              setTimeout(function () {
                 that.setData({
                   hid: true
                 })
 
               }, 2000)
-
+//本地缓存
+              try {
+                wx.setStorageSync('SAO_Result', res.data.SAO_Result )
+              } catch (e) { }
               if (P0 <= 55) {
                 console.log(55)
 
@@ -184,21 +181,19 @@ Page({
                 p0: P0
               })
               app.globalData.inp = 0
-
-
-
-
-
             }
           })
-
-
-
         }
-
       })
     }
+  },
 
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+    if(app.globalData.inp = 1)
+    this.onReady();
   },
 
   /**
@@ -244,12 +239,17 @@ Page({
     ,
   gotoPage3: function() {
     wx.navigateTo({
-      url: 'qs/index',
+      url: 'Changing_trends/index',
     })
   },
   gotoPage6: function() {
     wx.navigateTo({
-      url: 'jy',
+      url: 'Observational_recommendations/index',
     })
+  },
+  fresh: function (a) {
+    app.globalData.inp = 1
+this.onReady();
+
   }
 })

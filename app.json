@@ -3,7 +3,9 @@
     "pages/Realtime_Data/Main",
     "pages/Knowledge_Contest/Main",
     "pages/Astronomical_Query/Main",
-    "pages/Home_Page/Main"
+    "pages/Home_Page/Main",
+    "pages/Realtime_Data/Changing_trends/index",
+    "pages/Realtime_Data/Observational_recommendations/index"
   ],
   "permission": {
     "scope.userLocation": {
