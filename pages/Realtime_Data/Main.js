@@ -78,20 +78,33 @@ Page({
               LAT: app.globalData.LAT
             },
             fail(res) {
-
+              try {
+                var SAO_Result = wx.getStorageSync('SAO_Result')
+                if (value) {
+                  // Do something with return value
+                }
+              } catch (e) {
+                // Do something when catch error
+              }
               that.setData({
                 hid: true,
                 hid2: false,
                 isLoad: false,
-                locat: '加载失败',
-                cloudcover: '加载失败',
-                seeing: '加载失败',
+                P0: SAO_Result.P0.SAO,
+                locat: SAO_Result.City,
+                cloudcover: SAO_Result.P0.CloudCover.CloudCover_Value,
+                seeing: SAO_Result.P0.Seeing.Seeing_Value,
                 // rh2m: '加载失败',
-                temp: '加载失败',
+                temp: '加载失', //体感温度
                 temp2m: '加载失败',
-                transparency: '加载失败',
-                lifted_index: '加载失败',
-                P0: "--",
+                transparency: SAO_Result.P0.Transparency.Transparency_Value,
+                lifted_index: SAO_Result.P0.Lifted_Index.Lifted_Index_Value,
+                sseeing: SAO_Result.P0.Seeing.Explain,
+                strans: SAO_Result.P0.Transparency.Explain,
+                slifted: SAO_Result.P0.Lifted_Index.Explain,
+                scloudcover: SAO_Result.P0.CloudCover.Explain,
+                temp: SAO_Result.P0.Temperature
+             
               })
               setTimeout(function () {
                 that.setData({
@@ -128,6 +141,7 @@ Page({
 
               }, 2000)
 //本地缓存
+             
               try {
                 wx.setStorageSync('SAO_Result', res.data.SAO_Result )
               } catch (e) { }
@@ -138,6 +152,7 @@ Page({
                   jpg: app.globalData.Main_Server + '/images/0-55.jpg',
                   q1: '不适宜观测'
                 })
+              
 
               }
               if (56 <= P0 && P0 <= 65) {
@@ -232,7 +247,7 @@ Page({
   },
   gotoPage1: function() {
       wx.navigateTo({
-        url: 'more/index',
+        url: 'More_City/index',
       })
     }
 

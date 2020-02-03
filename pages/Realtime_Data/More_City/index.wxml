@@ -1,0 +1,23 @@
+<view style="width:100%;height:80%">
+
+<map id="map" longitude="102.324520" latitude="40.099994" scale="4" bindcontroltap="controltap" polygons="{{polygons}}" bindregionchange="regionchange" markers="{{markers}}" bindmarkertap="markertap" show-location style="width: 100%; height:300px;"></map>
+
+</view>
+<view class='margin-sm bg-white padding-sm radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>输入经纬度</view>
+  <view class='text-content'>
+    <view>输入经纬度或点击地图选点可查看指定位置观测适宜度，仅限中华人民共和国大陆境内。</view>
+ 	<view class="cu-form-group margin-top">
+		<view class="title">经度</view>
+	 <input class="weui-input" bindinput="jd" placeholder="请输入经度" value='{{jd}}' type='digit'/>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">纬度</view>
+	 <input class="weui-input" bindinput="wd" placeholder="请输入纬度"  value='{{wd}}' type='digit'/>
+	</view>
+  </view>
+</view>
+
+
+<ad unit-id="adunit-f647cd563c7ef27d"></ad>
+                <button class="btn1" hover-class='btn-hover' bindtap="gotoPage2" >确定</button>

@@ -5,7 +5,8 @@
     "pages/Astronomical_Query/Main",
     "pages/Home_Page/Main",
     "pages/Realtime_Data/Changing_trends/index",
-    "pages/Realtime_Data/Observational_recommendations/index"
+    "pages/Realtime_Data/Observational_recommendations/index",
+    "pages/Realtime_Data/More_City/index"
   ],
   "permission": {
     "scope.userLocation": {

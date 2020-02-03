@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
+	"libVersion": "2.10.1",
 	"appid": "wxe57f6e85d8263355",
 	"projectname": "Jupyter2",
 	"debugOptions": {
