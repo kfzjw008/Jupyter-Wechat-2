@@ -1,2 +1,109 @@
-<!--pages/Astronomical_Query/Main.wxml-->
-<text>pages/Astronomical_Query/Main.wxml</text>
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">天文相关查询</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Search</text>
+    </view>
+  </view>
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>我们将各种天文实用工具进行了汇总，合并至此。本模块内容会不断进行补充、完善和优化。未来会有更多功能上线，敬请期待！</view>
+
+  </view>
+</view>
+
+
+<view class="cu-list grid col-3 gridBorder:'no-border'">
+
+    <view class="cu-item" >
+      <navigator url="hx_search/index">
+      <view class="cuIcon-searchlist text-gray">
+       <view class="cu-tag  badge " >
+         
+        </view>
+      </view>
+      <text>恒星查询</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item" >
+    <navigator url="moon/index">
+      <view class="cuIcon-global text-blue">
+       <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>月球月相</text>
+      </navigator>
+    </view>
+
+  <view class="cu-item" >
+    <navigator url="star/index">
+      <view class="cuIcon-discover text-orange">
+       <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>八大行星</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item" >
+    <navigator url="calendar/index">
+      <view class="cuIcon-calendar text-yellow">
+       <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>天象日历</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item" >
+    <navigator url="sun/index">
+      <view class="cuIcon-time text-orange">
+       <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>日出日落</text>
+      </navigator>
+    </view>
+<!-- 
+       <view class="cu-item " hidden="true" >
+    <navigator url="tj/index">
+      <view class="cuIcon-focus text-purple ">
+        <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>观测推荐</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item " hidden="true" >
+    <navigator url="kp/index">
+      <view class="cuIcon-new text-blue ">
+        <view class="cu-tag badge " >
+         <block >NEW</block>
+        </view>
+      </view>
+      <text>天文科普</text>
+      </navigator>
+    </view>-->
+
+   <view class="cu-item " hidden="true" >
+    <navigator url="i/index">
+      <view class="cuIcon-info text-black ">
+        <view class="cu-tag badge " >
+          <block >NEW</block>
+        </view>
+      </view>
+      <text>查询说明</text>
+      </navigator>
+    </view>  
+
+
+</view>
+<ad unit-id="adunit-f422b15cafd9a7cc" ad-intervals="30"></ad>
+
+   

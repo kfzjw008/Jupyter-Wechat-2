@@ -1,2 +1,95 @@
-<!--pages/Knowledge_Contest/Main.wxml-->
-<text>pages/Knowledge_Contest/Main.wxml</text>
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">天文知识题库</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Question</text>
+    </view>
+  </view>
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>这里有目前较全的天文知识练习题，可以用作天文知识学习及知识竞赛备战。</view>
+    <view >高校天文协会认证用户可以使用独家专属题库。</view>
+     <view >目前可用题数：{{timu}}</view>
+  </view>
+</view>
+
+
+<view class="cu-list grid col-3 gridBorder:'no-border'">
+
+    <view class="cu-item" >
+      <navigator url="Module/index">
+      <view class="cuIcon-apps text-gray">
+      </view>
+      <text>模块学习</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item" >
+    <navigator url="Random_exercises/index">
+      <view class="cuIcon-playfill text-green">
+      </view>
+      <text>随机练习</text>
+      </navigator>
+    </view>
+
+  <view class="cu-item" >
+    <navigator url="Search/index">
+      <view class="cuIcon-samefill text-orange">
+      </view>
+      <text>查找试题</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item" >
+    <navigator url="cs/start">
+      <view class="cuIcon-countdownfill text-blue">
+      </view>
+      <text>在线测试</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item" >
+    <navigator url="jl/index">
+      <view class="cuIcon-rankfill text-red">
+      </view>
+      <text>练习记录</text>
+      </navigator>
+    </view>
+
+       <view class="cu-item " hidden="true" >
+    <navigator url="rz/index">
+      <view class="cuIcon-profilefill text-blue ">
+        <view class="cu-tag badge " >
+          <block >新</block>
+        </view>
+      </view>
+      <text>我的积分</text>
+      </navigator>
+    </view>
+
+   <view class="cu-item " hidden="true" >
+    <navigator url="tzs/start">
+      <view class="cuIcon-upstagefill text-yellow ">
+        <view class="cu-tag badge " >
+          <block >新</block>
+        </view>
+      </view>
+      <text>排行榜</text>
+      </navigator>
+    </view>
+ <!-- 
+   <view class="cu-item " hidden="true" >
+    <navigator url="activity/start">
+      <view class="cuIcon-presentfill text-red ">
+        <view class="cu-tag badge " >
+          <block >NEW</block>
+        </view>
+      </view>
+      <text>有奖答题活动</text>
+      </navigator>
+    </view>  与 --> 
+
+
+</view>
+<ad unit-id="adunit-f422b15cafd9a7cc" ad-intervals="30"></ad>
+
+   

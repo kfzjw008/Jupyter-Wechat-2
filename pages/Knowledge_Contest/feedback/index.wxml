@@ -1,0 +1,41 @@
+<!--pages/qa/testsj/index.wxml-->
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">问题反馈</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Feedback</text>
+    </view>
+  </view>
+
+
+          <view class='margin-sm bg-white padding-lg radius solid  '  >
+  <view class='text-content'>
+  <view >您可以在下方反馈问题，我们会及时处理。</view>
+  </view>
+</view>
+
+	<view class="cu-form-group margin-top">
+		<view class="title">问题类别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'选择类别'}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group align-start">
+		<view class="title">反馈内容</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput"  placeholder=" "></textarea>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input placeholder="QQ,电话,邮箱等,选填" bindinput="textareaBInput2" ></input>
+	</view>
+<ad unit-id="adunit-eba74f67d92ae4d1"></ad>
+
+       	<view class='cu-btn bg-blue lg block shadow radius margin-xl'   data-target="viewModal" bindtap="gotoPage2"  >
+	提交
+				</view>
+
+
+
+
+

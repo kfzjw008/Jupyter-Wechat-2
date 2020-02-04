@@ -13,7 +13,7 @@
     <view  wx:if="{{islogin==true}}" class="margin-top-sm">
       <open-data type="userCity" lang="zh_CN"></open-data>
     </view>
-    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+
   </view>
   <view class="padding flex text-center text-grey bg-white shadow-warp">
     <view class="flex flex-sub flex-direction solid-right">

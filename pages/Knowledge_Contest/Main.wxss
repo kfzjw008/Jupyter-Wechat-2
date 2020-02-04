@@ -1,1 +1,5 @@
-/* pages/Knowledge_Contest/Main.wxss */
+@import '../../icon.wxss';
+page {
+  background: #ffffff;
+
+}

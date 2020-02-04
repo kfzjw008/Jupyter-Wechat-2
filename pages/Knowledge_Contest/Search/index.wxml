@@ -1,0 +1,25 @@
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">知识题库查询</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Question data</text>
+    </view>
+  </view>
+<view class="cu-bar bg-white search " style="top:{{CustomBar}}px;background-color:#fcfcfc">
+  <view class="search-form round">
+    <text class="cuIcon-search" style='margin:0 30rpx;'></text>
+   <input type="text" class="weui-search-bar__input" placeholder="输入搜索的关键词" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-blue shadow-blur " bindtap="hideInput" >搜索</button>
+  </view>
+</view>
+
+
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+        <view >本次统计共近1000道试题（截至2019年10月），蕴含行星、恒星、航空航天、星座等多方面知识。目前主要数据仍然为部分原创的选择题。
+   后续我们将会对题库进行逐步的扩充，并进行更为详细的分类和完善。若未进行用户认证，该模块的使用可能会有所受限。</view>
+     <view >题目来源：原创和网络</view>
+</view></view>
+<ad unit-id="adunit-6345631f06ed5903"></ad>
+

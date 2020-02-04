@@ -1,0 +1,90 @@
+<!--pages/qa/testsj/index.wxml-->
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">随机练习</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Prcatice</text>
+    </view>
+    <navigator class="action" url="../feedback/index"  hover-class="none" >
+    <text class="cuIcon-message"></text>
+    <text class="text-df">试题反馈</text>
+  </navigator>
+  </view>
+
+
+          <view class='margin-sm bg-white padding-lg radius solid  '  >
+  <view class='text-content'>
+  <view >{{Question_body}}</view>
+  <image wx:if="{{Image}}" src='{{Image}}' style='margin-right:auto;margin-left:auto;width:200px;height:150px'></image>
+  </view>
+</view>
+
+
+
+     		<view class='cu-btn bg-gray lg block shadow radius margin-xl'   bindtap="gotoPage3"  data-target="viewModal" wx:if="{{inputShoweda1==true}}">
+				A:{{A}}
+				</view>
+        	<view class='cu-btn bg-gray lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShoweda2==true}}">
+				A:{{A}}
+				</view>
+        	<view class='cu-btn bg-green lg block shadow radius margin-xl'     data-target="viewModal" wx:if="{{inputShoweda3==true}}">
+				A:{{A}}
+				</view>
+        	<view class='cu-btn bg-red lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShoweda4==true}}">
+				A:{{A}}
+				</view>
+
+
+             		<view class='cu-btn bg-gray lg block shadow radius margin-xl'   bindtap="gotoPage4"  data-target="viewModal" wx:if="{{inputShowedb1==true}}">
+				B:{{B}}
+				</view>
+        	<view class='cu-btn bg-gray lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedb2==true}}">
+			B:{{B}}
+				</view>
+        	<view class='cu-btn bg-green lg block shadow radius margin-xl'     data-target="viewModal" wx:if="{{inputShowedb3==true}}">
+				B:{{B}}
+				</view>
+        	<view class='cu-btn bg-red lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedb4==true}}">
+				B:{{B}}
+				</view>
+             		<view class='cu-btn bg-gray lg block shadow radius margin-xl'   bindtap="gotoPage5"  data-target="viewModal" wx:if="{{inputShowedc1==true}}">
+			C:{{C}}
+				</view>
+        	<view class='cu-btn bg-gray lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedc2==true}}">
+		C:{{C}}
+				</view>
+        	<view class='cu-btn bg-green lg block shadow radius margin-xl'     data-target="viewModal" wx:if="{{inputShowedc3==true}}">
+			C:{{C}}
+				</view>
+        	<view class='cu-btn bg-red lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedc4==true}}">
+			C:{{C}}
+				</view>
+             		<view class='cu-btn bg-gray lg block shadow radius margin-xl'   bindtap="gotoPage6"  data-target="viewModal" wx:if="{{inputShowedd1==true}}">
+			D:{{D}}
+				</view>
+        	<view class='cu-btn bg-gray lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedd2==true}}">
+		D:{{D}}
+				</view>
+        	<view class='cu-btn bg-green lg block shadow radius margin-xl'     data-target="viewModal" wx:if="{{inputShowedd3==true}}">
+			D:{{D}}
+				</view>
+        	<view class='cu-btn bg-red lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShowedd4==true}}">
+				D:{{D}}
+				</view>
+        <view class='margin-sm bg-white padding-lg radius solid  '  wx:if="{{inputShoweda1==false}}">
+  <view class='text-content'>
+  <view  wx:if="{{inputShoweda1==false}}">正确答案：{{Correct_Answer}}</view>
+<view  wx:if="{{inputShoweda1==false}}">解析：{{Question_Analysis}}</view>
+<view  wx:if="{{inputShoweda1==false}}">难度：{{difficulty}}</view>
+  </view>
+</view>
+
+<ad unit-id="adunit-eba74f67d92ae4d1"></ad>
+
+       	<view class='cu-btn bg-blue lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShoweda1==false}}" bindtap="gotoPage2"  disabled="{{dis}}">
+	下一题
+				</view>
+
+
+
+
+

@@ -1,4 +1,4 @@
-@import '../../icon.wxss';
+/* pages/qa/se/index.wxss */
 page {
   background: #ffffff;
 

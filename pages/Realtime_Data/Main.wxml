@@ -14,7 +14,7 @@
   </view>
   <text style='font-size:100px ;color:#FFFFFF;padding:0rpx;line-height:0.95em;'>{{P0}}</text>
   <view style='font-size:18px ;color:#FFFFFF;text-align:center;margin-bottom:60px'>{{q1}}</view>
-  <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+
 </view>
     <view class="flex">
       <view class="flex-sub  padding-sm margin-xs radius"> <button class="btn3" bindtap="gotoPage1">

@@ -17,3 +17,6 @@ position: relative;
  top: 3rpx;
  box-shadow:0px 0px 8px #999 inset; 
 }
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
