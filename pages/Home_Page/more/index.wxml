@@ -1,0 +1,26 @@
+
+
+
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <button class="cu-btn content" open-type="contact">
+        <text class="cuIcon-service text-cyan"></text>
+        <text class="text-grey">客服对话</text>
+      </button>
+    </view>
+    <view class="cu-item arrow" style='min-height:90rpx'>
+      <button class="cu-btn content" open-type="openSetting">
+        <text class="cuIcon-punch text-cyan"></text>
+        <text class="text-grey">权限设置</text>
+      </button>
+    </view>
+        <view class="cu-item arrow" style='min-height:90rpx'>
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-mail text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+
+  </view>
+

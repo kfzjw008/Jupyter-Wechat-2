@@ -103,8 +103,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    Main_Server: "http://localhost:8080", //主请求服务器
-    //Main_Server: "https://www.jishestudio.com/jupyteradmin",
+    //Main_Server: "http://localhost:8080", //主请求服务器
+    Main_Server: "https://www.jishestudio.com/jupyteradmin",
     LON: "116.2", //经度
     LAT: "39.9", //纬度
     inp: 1,
@@ -118,5 +118,10 @@ App({
     Correct_Answer: "", //练习答案临时储存
     id:"",//试题反馈id记录
     page1:"",//试题搜索页码
+    tishu:0,//在线测试题目计数
+    cspd1:0,
+    allqs:0,
+    cstimu:0,
+    csscore:0
   }
 })

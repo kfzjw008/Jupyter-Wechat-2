@@ -40,7 +40,7 @@
     </view>
 
    <view class="cu-item" >
-    <navigator url="cs/start">
+    <navigator url="Test/start">
       <view class="cuIcon-countdownfill text-blue">
       </view>
       <text>在线测试</text>

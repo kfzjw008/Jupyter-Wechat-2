@@ -116,7 +116,7 @@ Page({
               //此处获取数据
               console.log(res.data.SAO_Result.P0)
               var P0 = res.data.SAO_Result.P0.SAO
-
+              app.globalData.inp = 0
               that.setData({
                 isLoad: true,
                 P0: res.data.SAO_Result.P0.SAO,
@@ -201,14 +201,18 @@ Page({
         }
       })
     }
+    app.globalData.inp = 0
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    if(app.globalData.inp = 1)
-    this.onReady();
+    if(app.globalData.inp ==1){
+      console.log(app.globalData.inp)
+      this.onReady();
+    }
+
   },
 
   /**

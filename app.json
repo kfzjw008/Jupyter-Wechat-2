@@ -14,7 +14,14 @@
     "pages/Knowledge_Contest/Random_exercises/index",
     "pages/Knowledge_Contest/Search/index",
     "pages/Knowledge_Contest/Search/result",
-    "pages/Knowledge_Contest/Search/detail/index"
+    "pages/Knowledge_Contest/Search/detail/index",
+    "pages/Home_Page/about/index",
+    "pages/Home_Page/more/index",
+    "pages/Home_Page/question/index",
+    "pages/Knowledge_Contest/Test/start",
+    "pages/Knowledge_Contest/Test/test",
+    "pages/Knowledge_Contest/Test/result",
+    "pages/Knowledge_Contest/Test/zdy"
   ],
   "permission": {
     "scope.userLocation": {

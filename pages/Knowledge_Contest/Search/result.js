@@ -134,7 +134,7 @@ Page({
   onShow: function (res) {
 
     var that = this
-    console.log(res)
+    console.log(token)
 
       wx.request({
       url: app.globalData.Main_Server + "/api/question/Search",

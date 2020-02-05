@@ -1,0 +1,17 @@
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于星云村V2.0</view>
+  <view class='text-content'>
+    <view>星云村集天文实时数据查询，资料查询，知识学习等模块于一体，方便广大天文爱好者学习知识开展观测活动。</view>
+  <view >星云村V2.0由张峻巍独立开发 </view>
+   
+             <view >特别鸣谢：东北林业大学天文爱好者协会</view>
+             <view >数据来源：晴天钟7timer 银河说 中国天气网 </view>
+              <view >UI来源： ColorUI  </view>
+   <view >感谢小程序V1.0上线前，以下申请体验者的宝贵意见： </view>
+   <view >孙佳尼  于洋 张星 王一婷 向坤 刘家欣 刘蕊 从儒雅 单师然 黄思薇  江山 沈芳 彭安康 姜晨晗 贾慧妍 陈昱君 黄岭 李东晓 甄安琪 </view>
+      <view >同时，产品目前属于个人运营。如果您希望对我们的产品提出支持或者联系我们，可以联系邮箱：Email:zhangjunwei2018@qq.com</view>
+
+  </view>
+</view>
+
+

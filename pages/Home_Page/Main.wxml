@@ -100,7 +100,7 @@
 
 
      <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="sz/sz" hover-class="none">
+      <navigator class="content" url="more/index" hover-class="none">
         <text class="cuIcon-settings  text-gray"></text>
         <text class="text-grey">设置与反馈</text>
       </navigator>
@@ -113,7 +113,7 @@
 
 
      <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="qa/qa" hover-class="none">
+      <navigator class="content" url="question/index" hover-class="none">
         <text class="cuIcon-question text-red"></text>
         <text class="text-grey">常见问题</text>
       </navigator>
@@ -121,7 +121,7 @@
 
 
      <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="about/about" hover-class="none">
+      <navigator class="content" url="about/index" hover-class="none">
         <text class="cuIcon-news text-blue"></text>
         <text class="text-grey">关于我们</text>
       </navigator>

@@ -1,0 +1,82 @@
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：无法获取数据？
+ </text>
+  <view class='text-content'>
+      <text >A：1、检查网络连接是否存在问题。2、是否在境外？本系统只提供中华人民共和国境内服务。3、服务器内部错误，请向我们反馈问题。4、检查GPS权限。5、最近发现部分地区数据获取可能会存在问题，可能是您所处位置过于偏僻，该问题会尽快解决。
+      </text>
+  </view>
+</view>
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：观测适宜度如何判断？
+ </text>
+  <view class='text-content'>
+      <text >观测适宜度取值为0-100,55以上具备基础观测价值（可以看到星星），80以上具备较好的观测价值（野外大型观测）。数字越大，越适宜观测。
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：哪些因素会影响观测适宜度呢？
+ </text>
+  <view class='text-content'>
+      <text >A:大气因素诸如云量，视宁度，其他因素包括空气质量，风速，温度，湿度都会对观测的适宜度评价产生影响。 
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q:观测适宜度的计算真的科学吗？
+ </text>
+  <view class='text-content'>
+      <text >A:该项计算基于AHP层次分析法，通过天空因素，地面因素，体感温度等多重数据经过多次反复调研设计算法得出。目前该项研究成果已经由开发人员发表在中文科技核心期刊上，具有一定的参考价值。 
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q:观测适宜度的数据更新时间？
+ </text>
+  <view class='text-content'>
+      <text >A:每半小时会更新一次。目前支持 查看60小时以内的数据.
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：题目的答案有问题怎么办？
+ </text>
+  <view class='text-content'>
+      <text >如果在作答过程中发现题目有问题，可以通过试题界面右上角的反馈入口进行反馈，也可以使用客服会话或者意见反馈功能与我们联络，我们在收到您的反馈后会第一时间进行处理。
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：恒星表有许多恒星名称有问题？
+ </text>
+  <view class='text-content'>
+      <text >恒星表的恒星名称基于西方的命名规则修改而来，在我们多次调研中发现西方命名对于实际观测查询意义不大，且许多西方命名令人难以理解，甚至出现数据的错误。在后续版本中，我们会逐步加入中国古代恒星名称，敬请期待。  
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：数据加载缓慢？
+ </text>
+  <view class='text-content'>
+      <text >本小程序的原理是借助数据源服务器，基于数据处理服务器来获取数据，经过两层服务器的传递势必会影响传递效率。另一方面，经过多次测试，数据源服务器系统数据返回较为缓慢是主要原因。
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：练习记录无法永久保存？
+ </text>
+  <view class='text-content'>
+      <text >1、请检查您的网络问题。2、如网络正常，则可能是登录失效，请清空微信缓存或者登录后重试。
+      </text>
+  </view>
+</view>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+ <text class='text-center margin-bottom text-lg  text-grey'  style='text-align:right;color:#3763BA ;font-weight:bolder'>Q：部分功能无法使用或者功能异常？
+ </text>
+  <view class='text-content'>
+      <text >1、请检查您的网络问题。2、如网络正常，则请登录使用功能。3、如已经登录，则可能是登录失效，请清空微信缓存，然后重新登录。
+      </text>
+  </view>
+</view>
+

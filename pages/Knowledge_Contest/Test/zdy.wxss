@@ -1,0 +1,21 @@
+/* pages/index/more/index.wxss */
+page {
+  background: #ffffff;
+
+}
+.btn1 {
+  width: 75%;
+  margin-top: 20rpx;
+  background-color: #3763ba;
+  color: #effef4;
+  border-radius: 98rpx;
+}
+.btn1::after {
+  border-radius: 98rpx;
+  border:0;
+}
+.btn-hover{
+position: relative;
+ top: 3rpx;
+ box-shadow:0px 0px 8px #999 inset; 
+}

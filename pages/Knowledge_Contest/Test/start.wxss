@@ -1,0 +1,5 @@
+/* pages/qa/cs/start.wxss */
+page {
+  background: #ffffff;
+
+}

@@ -1,0 +1,25 @@
+@import '../../../icon.wxss';
+page {
+  background: #ffffff;
+
+}
+.btn2 {
+  width: 240rpx;
+  height: 80rpx;
+  margin-top: 26rpx;
+  margin-right: 20rpx;
+  color: #3763ba;
+  background-color: #effef4;
+  border-radius: 98rpx;
+  font-size: 32rpx;
+  align-items: center;
+  justify-content: center;
+}
+.btn2::after {
+  border-radius: 98rpx;
+}
+.btn-hover{
+position: relative;
+ top: 3rpx;
+ box-shadow:0px 0px 8px #999 inset; 
+}
