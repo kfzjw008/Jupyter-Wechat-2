@@ -1,0 +1,39 @@
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">挑战结束</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">test result</text>
+    </view>
+  </view>
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>您答错了，挑战结束！以下是您的测试挑战结果。</view>
+  </view>
+</view>
+
+
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''>
+
+
+
+  <view class="cu-item" > 
+      <text class='text-grey' style='text-align:left'>用户昵称</text> <text  class='text-grey'  style='text-align:right'><open-data type="userNickName" lang="zh_CN"></open-data> </text>
+  </view>
+
+
+    <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>正确题数</text> <text   class='text-grey'  style='text-align:right;'>{{csrighttimu}}题</text>
+  </view>
+  
+    </view>
+  
+
+         		<view class='cu-btn bg-gray lg block shadow radius margin-xl'    bindtap='gotoPage2' data-target="viewModal">
+				返回
+				</view>
+
+
+
+
+
+  

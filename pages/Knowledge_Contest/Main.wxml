@@ -47,6 +47,17 @@
       </navigator>
     </view>
 
+<view class="cu-item" >
+    <navigator url="Challenge/start">
+      <view class="cuIcon-crownfill text-orange">
+           <view class="cu-tag badge " >
+          <block >新</block>
+        </view>
+      </view>
+      <text>挑战模式</text>
+      </navigator>
+    </view>
+
    <view class="cu-item" >
     <navigator url="jl/index">
       <view class="cuIcon-rankfill text-red">
@@ -67,7 +78,7 @@
     </view>
 
    <view class="cu-item " hidden="true" >
-    <navigator url="tzs/start">
+    <navigator url="ranklist/index">
       <view class="cuIcon-upstagefill text-yellow ">
         <view class="cu-tag badge " >
           <block >新</block>

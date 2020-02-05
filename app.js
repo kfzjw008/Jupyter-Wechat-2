@@ -122,6 +122,8 @@ App({
     cspd1:0,
     allqs:0,
     cstimu:0,
-    csscore:0
+    csscore:0,
+    tzjsq:1,
+    tzjsqsave:0,
   }
 })

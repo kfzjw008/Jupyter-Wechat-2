@@ -21,7 +21,11 @@
     "pages/Knowledge_Contest/Test/start",
     "pages/Knowledge_Contest/Test/test",
     "pages/Knowledge_Contest/Test/result",
-    "pages/Knowledge_Contest/Test/zdy"
+    "pages/Knowledge_Contest/Test/zdy",
+    "pages/Knowledge_Contest/Challenge/start",
+    "pages/Knowledge_Contest/ranklist/index",
+    "pages/Knowledge_Contest/Challenge/test",
+    "pages/Knowledge_Contest/Challenge/result"
   ],
   "permission": {
     "scope.userLocation": {
