@@ -1,2 +1,46 @@
-<!--pages/Astronomical_Query/StellarQuery/result.wxml-->
-<text>pages/Astronomical_Query/StellarQuery/result.wxml</text>
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">搜索结果-{{search}}</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Search Result</text>
+    </view>
+  </view>
+<view class='margin-0 bg-white padding-sm radius solid  shadow'>
+  <view class='text-center margin-bottom text-lg  text-grey'  style='margin-bottom:0rpx;'>共搜索到相关结果{{count}}个,第{{page}}页</view>
+   <view class='text-center margin-bottom text-lg  text-grey'  style='margin-bottom:0rpx;'>搜索结果按视星等亮到暗排序</view>
+</view>
+
+
+<ad unit-id="adunit-757f6940d6f0f10b"></ad>
+<view class="cu-card article " wx:if="{{count>0}}" bindtap='det'  wx:for="{{list}}" id="{{item.id}}" wx:key="list">
+  
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">{{item.Name}}</view>
+    </view>
+    <view class="content">
+  
+      <view class="desc">
+        <view class="text-content"> "Right_ascension": {{item.Right_ascension}},
+            "Declination": {{item.Declination}},
+               "Classification": {{item.Classification}},
+            "Notes": {{item.Notes}},
+            "Constellation": {{item.Constellation}}</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">视星等:{{item.Apparent_magnitude}}</view>
+          <view class="cu-tag bg-green light sm round">中国传统星名:{{item.Ancient_Chinese_Name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  </view>
+  		<view class='cu-btn bg-blue lg block shadow radius margin-xl'wx:if="{{count>15&&page>1}}"  bindtap='nextpage2' data-target="viewModal">
+				上一页
+				</view>
+        		<view class='cu-btn bg-blue lg block shadow radius margin-xl'  wx:if="{{count>15&&page<pgc}}"  bindtap='nextpage' data-target="viewModal">
+					下一页
+				</view>
+
+
+
+

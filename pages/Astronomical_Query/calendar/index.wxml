@@ -5,3 +5,24 @@
     </view>
 
   </view>
+
+	<view class="cu-form-group ">
+		<view class="title">日期选择</view>
+		<picker mode="date" value="{{date}}" start="2020-01-01" end="2021-12-31" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+
+  <view class='margin-xl  padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  '>查询结果</view>
+
+  
+  <view class='text-content '>
+  <view>{{re}}</view>
+    <view>{{re2}}</view>
+
+
+  </view>
+</view>

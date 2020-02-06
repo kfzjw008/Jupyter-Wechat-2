@@ -5,3 +5,103 @@
     </view>
 
   </view>
+
+
+	<view class="cu-form-group margin-top">
+		<view class="title">选择行星</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+			请选择
+			</view>
+		</picker>
+	</view>
+
+
+
+<view class='margin-sm bg-white  radius shadow-lg' style=' padding: 10rpx;'>
+  <view class='text-center margin-bottom text-lg  text-grey'>行星数据表</view>
+  <view class='text-content'>
+    <view>查看行星的基本静态数据。</view>
+
+    <view class="table">
+      <view class="tr">
+        <view class="th">属性</view>
+        <view class="th">值</view>
+     
+
+      </view>
+      <view class="tr">
+        <view class="td">偏心率Bias_rate</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P0}}</view>
+       
+
+
+      </view>
+      <view class="tr">
+        <view class="td">赤道重力Equatorial_gravity</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P1}}</view>
+      
+
+      </view>
+      <view class="tr">
+        <view class="td">赤道倾角Equatorial_inclination</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P2}}</view>
+       
+
+
+      </view>
+      <view class="tr">
+        <view class="td">赤道半径Equatorial_radius</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P3}}</view>
+        
+      </view>
+      <view class="tr">
+        <view class="td">卫星数量</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P4}}</view>
+      
+      </view>
+      <view class="tr">
+        <view class="td">轨道半径</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P5}}</view>
+     
+
+      </view>
+      <view class="tr">
+        <view class="td">轨道倾角</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P6}}</view>
+       
+
+
+      </view>
+      <view class="tr">
+        <view class="td">比重</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P7}}</view>
+       
+      </view>
+      <view class="tr">
+        <view class="td">质量（地球为1）</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P8}}</view>
+       
+      </view>
+      <view class="tr">
+        <view class="td">自转周期</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P9}}</view>
+    
+      </view>
+      <view class="tr">
+        <view class="td">公转周期</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P9}}</view>
+    
+      </view>
+
+     <view class="tr">
+        <view class="td">体积</view>
+        <view class="td" style='font-size:12px;color:#3763BA ;font-weight:bolder '>{{P9}}</view>
+    
+      </view>
+    </view>
+ 
+
+
+  </view>
+</view>
