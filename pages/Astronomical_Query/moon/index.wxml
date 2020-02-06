@@ -5,3 +5,26 @@
     </view>
 
   </view>
+
+
+	<view class="cu-form-group  bg-black">
+		<view class="title">日期选择</view>
+		<picker mode="date" value="{{date}}" start="1950-01-01" end="2050-12-31" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+
+  <view class='margin-xl bg-black padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-write'>查询结果</view>
+  <view style="justify-content: center; align-items: center;text-align:center;display: flex;"><image  src="{{src}}" style="align:center;width: 70px; height: 70px;display: flex;"  mode="widthFix"></image></view>
+  
+  <view class='text-content text-write'>
+  <view>年份：{{y}}</view>
+    <view>月份：{{m}}</view>
+<view>日期：{{d}}</view>
+<view>月相：{{moon}}</view>
+
+  </view>
+</view>

@@ -1,4 +1,5 @@
 /* pages/Astronomical_Query/moon/index.wxss */
+@import '../../../icon.wxss';
 page {
   background: #333;
 
