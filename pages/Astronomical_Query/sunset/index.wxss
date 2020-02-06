@@ -1,0 +1,5 @@
+/* pages/Astronomical_Query/moon/index.wxss */
+page {
+  background: #ffffff;
+
+}

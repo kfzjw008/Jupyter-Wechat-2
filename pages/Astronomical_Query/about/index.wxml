@@ -1,0 +1,13 @@
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于天文查询模块</view>
+  <view class='text-content'>
+    <view>天文查询模块已经开通。前期主要包括恒星查询，月球月相，八大行星，天象日历，日出日落五个模块。您也可以向我们提出反馈，来增加更多方便入门爱好者的模块。</view>
+
+
+
+  </view>
+</view>
+         		<view class='cu-btn bg-blue lg block shadow radius margin-xl'    bindtap='gotoPage2' data-target="viewModal">
+					提出反馈
+				</view>
+

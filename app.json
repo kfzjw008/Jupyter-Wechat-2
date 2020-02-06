@@ -25,7 +25,16 @@
     "pages/Knowledge_Contest/Challenge/start",
     "pages/Knowledge_Contest/ranklist/index",
     "pages/Knowledge_Contest/Challenge/test",
-    "pages/Knowledge_Contest/Challenge/result"
+    "pages/Knowledge_Contest/Challenge/result",
+    "pages/Astronomical_Query/about/index",
+    "pages/Knowledge_Contest/record/index",
+    "pages/Astronomical_Query/StellarQuery/index",
+    "pages/Astronomical_Query/StellarQuery/result",
+    "pages/Astronomical_Query/StellarQuery/detail/index",
+    "pages/Astronomical_Query/sunset/index",
+    "pages/Astronomical_Query/planet/index",
+    "pages/Astronomical_Query/moon/index",
+    "pages/Astronomical_Query/calendar/index"
   ],
   "permission": {
     "scope.userLocation": {

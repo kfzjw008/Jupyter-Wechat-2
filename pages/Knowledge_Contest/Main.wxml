@@ -59,7 +59,7 @@
     </view>
 
    <view class="cu-item" >
-    <navigator url="jl/index">
+    <navigator url="record/index">
       <view class="cuIcon-rankfill text-red">
       </view>
       <text>练习记录</text>

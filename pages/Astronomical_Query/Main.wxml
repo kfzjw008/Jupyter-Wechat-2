@@ -15,7 +15,7 @@
 <view class="cu-list grid col-3 gridBorder:'no-border'">
 
     <view class="cu-item" >
-      <navigator url="hx_search/index">
+      <navigator url="StellarQuery/index">
       <view class="cuIcon-searchlist text-gray">
        <view class="cu-tag  badge " >
          
@@ -37,7 +37,7 @@
     </view>
 
   <view class="cu-item" >
-    <navigator url="star/index">
+    <navigator url="planet/index">
       <view class="cuIcon-discover text-orange">
        <view class="cu-tag badge " >
          <block >NEW</block>
@@ -59,7 +59,7 @@
     </view>
 
    <view class="cu-item" >
-    <navigator url="sun/index">
+    <navigator url="sunset/index">
       <view class="cuIcon-time text-orange">
        <view class="cu-tag badge " >
          <block >NEW</block>
@@ -92,7 +92,7 @@
     </view>-->
 
    <view class="cu-item " hidden="true" >
-    <navigator url="i/index">
+    <navigator url="about/index">
       <view class="cuIcon-info text-black ">
         <view class="cu-tag badge " >
           <block >NEW</block>
