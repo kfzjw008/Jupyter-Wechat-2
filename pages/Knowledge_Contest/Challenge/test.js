@@ -537,7 +537,9 @@ Page({
         url: 'result',
       })
     }
-    var that = this
-    wx.redirectTo({ url: 'test', })
+    else{
+      wx.redirectTo({ url: 'test', })
+    }
+   
   }
 })

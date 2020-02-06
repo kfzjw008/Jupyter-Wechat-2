@@ -15,6 +15,7 @@
     display: inline-block;
 }
 
+
 .iconfont-pulse {
     -webkit-animation: icon-spin 1s infinite steps(8);
     animation: icon-spin 1s infinite steps(8);

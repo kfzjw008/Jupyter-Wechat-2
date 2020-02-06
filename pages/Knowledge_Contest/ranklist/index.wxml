@@ -1,2 +1,68 @@
-<!--pages/Knowledge_Contest/ranklist/index.wxml-->
-<text>pages/Knowledge_Contest/ranklist/index.wxml</text>
+<view class="cu-bar bg-white">
+  <view class="action title-style-3">
+    <text class="text-xl text-bold">排行榜</text>
+    <text class="text-Abc text-gray self-end margin-left-sm">Ranklist</text>
+  </view>
+</view>
+
+
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>目前开通：积分总排行，挑战总排行，练习数量排行。</view>
+  </view>
+</view>
+
+<scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{0==TabCur?'text-blue cur':''}}" id="0" wx:key bindtap="tabSelect" data-id="0">
+    积分排行
+  </view>
+  <view class="cu-item {{1==TabCur?'text-blue cur':''}}" id="1" wx:key bindtap="tabSelect" data-id="1">
+    挑战排行
+  </view>
+    <view class="cu-item {{2==TabCur?'text-blue cur':''}}" id="2" wx:key bindtap="tabSelect" data-id="1">
+  练习数排行
+  </view>
+</scroll-view>
+
+
+
+<view wx:key wx:if="{{0==TabCur}}">
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''  >
+    <view class="cu-item" wx:for="{{list2}}" id="{{item.id}} "data-index = "{{index}}"  wx:key="list2">
+    <text class='text-grey' style='text-align:left'>{{index+1}}</text>
+          <text class='text-grey' style='text-align:center'>{{item.nickname}}</text>
+      <text class='text-grey' style='text-align:right;'>{{item.sum}}分</text>
+    </view>
+    
+  </view>
+
+
+
+
+</view>
+
+
+
+<view id wx:key wx:if="{{1==TabCur}}" >
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''  >
+    <view class="cu-item" wx:for="{{list}}" id="{{item.id}} "data-index = "{{index}}"  wx:key="list">
+    <text class='text-grey' style='text-align:left'>{{index+1}}</text>
+          <text class='text-grey' style='text-align:center'>{{item.nickname}}</text>
+      <text class='text-grey' style='text-align:right;'>连对{{item.count}}题</text>
+    </view>
+    
+  </view>
+
+
+</view>
+
+
+<view id wx:key wx:if="{{2==TabCur}}" >
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''  >
+    <view class="cu-item" wx:for="{{list3}}" id="{{item.id}} "data-index = "{{index}}"  wx:key="list">
+    <text class='text-grey' style='text-align:left'>{{index+1}}</text>
+          <text class='text-grey' style='text-align:center'>{{item.nickname}}</text>
+      <text class='text-grey' style='text-align:right;'>共练习{{item.allquestion}}题</text>
+    </view>
+  </view>
+</view>
