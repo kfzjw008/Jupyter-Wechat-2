@@ -5,7 +5,7 @@ App({
       key: 'token',
       success(res2) {
         wx.request({
-          url: "http://localhost:8080/api/user/Verifytoken",
+          url: "https://www.jishestudio.com/jupyteradmin/api/user/Verifytoken",
           data: {
             token: res2.data
           },

@@ -7,12 +7,55 @@ Page({
    */
   data: {
     picker: ["水星", "金星", "地球","火星","木星","土星","天王星","海王星"],
+    p:null,
+    index:"地球"
 
   }, PickerChange(e) {
-    console.log(e);
+    var pp=null
+    var name=""
+    if (e.detail.value=='0'){
+       pp = wx.getStorageSync('planet').MercuryMap
+       name="水星"
+    }else
+    if (e.detail.value =='1') {
+     pp = wx.getStorageSync('planet').VenusMap
+      name = "金星"
+    }else
+    if (e.detail.value == '2') {
+       pp = wx.getStorageSync('planet').EarthMap
+      name = "地球"
+    } else
+    if (e.detail.value == '3') {
+      pp = wx.getStorageSync('planet').MarsMap
+      name = "火星"
+    } else
+    if (e.detail.value == '4') {
+       pp = wx.getStorageSync('planet').JupiterMap
+      name = "木星"
+    } else
+    if (e.detail.value =='5') {
+      pp = wx.getStorageSync('planet').SaturnMap
+      name = "土星"
+    } else
+    if (e.detail.value == '6') {
+      pp = wx.getStorageSync('planet').UranusMap
+      name = "天王星"
+    } else
+    if (e.detail.value == '7') {
+    pp = wx.getStorageSync('planet').NeptuneMap
+      name = "海王星"
+    }else{
+    pp = wx.getStorageSync('planet').EarthMap
+      name = "地球"
+      console.log("艹" + e.detail.value);
+    }
+    console.log("ca:"+e.detail.value);
+    console.log(pp);
     this.setData({
-      index: e.detail.value
+      index: name,
+      p:pp
     })
+
   },
 
   /**
@@ -42,13 +85,12 @@ Page({
       success(res) {
         var y = res.data.Result
        
-        try {
-          wx.setStorageSync('Planet', res.data.Result)
-        } catch (e) { }
         that.setData({
-         
+          p: res.data.Result.EarthMap
         })
-
+        try {
+          wx.setStorageSync('planet', res.data.Result)
+        } catch (e) { }
 
       }
     })

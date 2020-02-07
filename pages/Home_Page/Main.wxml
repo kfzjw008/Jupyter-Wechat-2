@@ -19,17 +19,17 @@
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl  text-blue">{{a1}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-edit"></text> 已做题数</view>
+        <text class="cuIcon-edit"></text> 积分</view>
     </view>
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl text-green ">{{a2}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-roundcheck"></text> 正确题数</view>
+        <text class="cuIcon-roundcheck"></text> 已做题数</view>
     </view>
     <view class="flex flex-sub flex-direction">
       <view class="text-xxl  text-orange">{{a3}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-roundclose"></text> 今日已做</view>
+        <text class="cuIcon-roundclose"></text> 正确率</view>
     </view>
   </view>
 

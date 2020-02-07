@@ -12,7 +12,10 @@ Page({
     loadModal: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     wd: '',
-    jd: ''
+    jd: '',
+    a1:"--",
+    a2:"--",
+    a3:"--"
   },
 
   /**
@@ -111,6 +114,43 @@ Page({
                 success: function (res) {
                   if (res.confirm) {
                     console.log('用户点击确定')
+                    wx.getStorage({
+                      key: '登录状态',
+                      success(res2) {
+                        if (res2.data == 2) {
+                        } else {
+
+                          var name = wx.getStorageSync('nickname')
+                          wx.request({
+                            url: app.globalData.Main_Server + "/api/rank/myrecord",
+                            data: {
+                              nick: name,
+                            },
+                            fail(res) {
+                            },
+                            success(res) {
+                              console.log(res.data)
+                              var a1 = res.data.CurrentQuestion.rate
+                              var a2 = res.data.allQuestion.allquestion
+                              var a3 = res.data.integral.sum
+                              var a4 = res.data.tz.count
+                              wx.setStorageSync('RECORD', res.data)
+                              that.setData({
+                                a1: a3,
+                                a2: a2,
+                                a3: a1,
+                                a4: a4,
+                              })
+
+
+                            }
+                          })
+
+
+                        }
+                      }
+                    })
+
                   }
                 }
               })
@@ -143,13 +183,45 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
+    var that = this
+    wx.getStorage({
+      key: '登录状态',
+      success(res2) {
+        if (res2.data == 2) {
+        } else {
 
-      a1: app.globalData.allquestion,
-      a2: app.globalData.allquestionright,
-      a3: app.globalData.allquestionwrong
+          var name = wx.getStorageSync('nickname')
+          wx.request({
+            url: app.globalData.Main_Server + "/api/rank/myrecord",
+            data: {
+              nick: name,
+            },
+            fail(res) {
+            },
+            success(res) {
+              console.log(res.data)
+              var a1 = res.data.CurrentQuestion.rate
+              var a2 = res.data.allQuestion.allquestion
+              var a3 = res.data.integral.sum
+              var a4 = res.data.tz.count
+              wx.setStorageSync('RECORD', res.data)
+              that.setData({
+                a1: a3,
+                a2: a2,
+                a3: a1,
+                a4: a4,
+              })
 
+
+            }
+          })
+
+
+        }
+      }
     })
+
+
   },
 
   /**
