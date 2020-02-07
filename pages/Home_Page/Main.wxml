@@ -37,7 +37,7 @@
 
 
     <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="gg/gg" hover-class="none">
+      <navigator class="content" url="board/index" hover-class="none">
         <text class="cuIcon-notificationfill text-blue"></text>
         <text class="text-grey">通知公告</text>
       </navigator>
@@ -50,15 +50,15 @@
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 
     <view class="cu-item arrow" style='min-height:90rpx'>
-      <view class="content" bindtap='kt' >
+      <navigator class="content"  url="Information/index" >
         <text class="cuIcon-post  text-grey"></text>
         <text class="text-grey">修改资料</text>
-      </view>
+      </navigator>
 
     </view>
 
   <view class="cu-item arrow" style='min-height:90rpx'>
-      <view class="content" bindtap='url' >
+      <view class="content" bindtap='on22' >
         <text class="cuIcon-card text-blue"></text>
         <text class="text-grey">身份认证</text>
       </view>
@@ -74,15 +74,15 @@
 
 
     <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="../qa/jl/index" hover-class="none">
+      <navigator class="content" url="../Knowledge_Contest/record/index" hover-class="none">
         <text class="cuIcon-rank text-blue"></text>
-        <text class="text-grey">数据统计</text>
+        <text class="text-grey">练习记录</text>
       </navigator>
  
     </view>
 
     <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" url="../qa/jl/index" hover-class="none">
+      <navigator class="content" bindtap='on22' hover-class="none">
         <text class="cuIcon-rank text-blue"></text>
         <text class="text-grey">我的积分</text>
       </navigator>

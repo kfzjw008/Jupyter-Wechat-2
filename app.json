@@ -34,7 +34,11 @@
     "pages/Astronomical_Query/sunset/index",
     "pages/Astronomical_Query/planet/index",
     "pages/Astronomical_Query/moon/index",
-    "pages/Astronomical_Query/calendar/index"
+    "pages/Astronomical_Query/calendar/index",
+    "pages/Home_Page/Information/index",
+    "pages/Home_Page/rz/index",
+    "pages/Home_Page/jf/index",
+    "pages/Home_Page/board/index"
   ],
   "permission": {
     "scope.userLocation": {

@@ -11,12 +11,35 @@ Page({
     lon: "",
     lat: "",
     P0: "--"
+    ,list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.request({
+      url: app.globalData.Main_Server + "/api/user/board",
+      data: {
+        size: 30,
+        page: app.globalData.page1
+
+      },
+      success(res) {
+        wx.showModal({
+          title: res.data.Board.content[0].title,
+          content: res.data.Board.content[0].content,
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            }
+          }
+        })
+      }
+    })
+
+
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
         adUnitId: 'adunit-fd7fc791b116e85f'

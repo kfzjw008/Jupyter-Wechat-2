@@ -1,0 +1,36 @@
+  <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">个人资料</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Search</text>
+    </view>
+
+  </view>
+  <view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>完善资料用于参与高校天协会员认证。</view>
+
+  </view>
+</view>
+  	<view class="cu-form-group">
+		<view class="title" >昵称</view>
+		<view  class="title" >{{name}}</view>
+	</view>
+   	<view class="cu-form-group">
+		<view class="title"  >性别</view>
+		<view  class="title">{{gender}}</view>
+	</view>
+   	<view class="cu-form-group">
+		<view class="title" >学校</view>
+		<input placeholder="用于高校天协会员认证"  bindinput="userNameInput1"  value="{{a1}}">{{a1}}</input>
+	</view>
+   	<view class="cu-form-group">
+		<view class="title">真实姓名</view>
+		<input placeholder="用于高校天协会员认证" bindinput="userNameInput2" value="{{a2}}"></input>
+	</view>
+   	<view class="cu-form-group">
+		<view class="title">所属协会</view>
+		<input placeholder="用于高校天协会员认证"  bindinput="userNameInput3"  value="{{a3}}">{{a3}}</input>
+	</view>
+              		<view class='cu-btn bg-blue lg block shadow radius margin-xl'    bindtap='gotoPage2' data-target="viewModal">
+					提交修改
+				</view>

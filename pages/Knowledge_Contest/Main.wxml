@@ -7,13 +7,18 @@
 <view class='margin-sm bg-white padding-lg radius solid  '>
   <view class='text-content'>
     <view>这里有目前较全的天文知识练习题，可以用作天文知识学习及知识竞赛备战。</view>
-    <view >高校天文协会认证用户可以使用独家专属题库。</view>
+    <view >本模块只有登录才可以使用。</view>
      <view >目前可用题数：{{timu}}</view>
   </view>
 </view>
 
 
-<view class="cu-list grid col-3 gridBorder:'no-border'">
+  <button  wx:if="{{islogin==false}}"  class='cu-btn bg-blue lg block shadow radius margin-xl'   open-type="getUserInfo" lang="zh_CN"   bindgetuserinfo="onGotUserInfo" >微信登录</button>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-global text-blue'></view>
+
+</view>
+<view  wx:if="{{islogin==true}}" class="cu-list grid col-3 gridBorder:'no-border'">
 
     <view class="cu-item" >
       <navigator url="Module/index">
@@ -65,7 +70,7 @@
       <text>练习记录</text>
       </navigator>
     </view>
-
+<!--
        <view class="cu-item " hidden="true" >
     <navigator url="rz/index">
       <view class="cuIcon-profilefill text-blue ">
@@ -75,7 +80,7 @@
       </view>
       <text>我的积分</text>
       </navigator>
-    </view>
+    </view>-->
 
    <view class="cu-item " hidden="true" >
     <navigator url="ranklist/index">

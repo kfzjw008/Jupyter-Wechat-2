@@ -100,6 +100,9 @@ Page({
               wx.setStorageSync('province', e.detail.userInfo.province)
               wx.setStorageSync('city', e.detail.userInfo.city)
               wx.setStorageSync('登录状态', 1)
+              wx.setStorageSync('school', res.data.OpenId.school)
+              wx.setStorageSync('schoolid', res.data.OpenId.schoolid)
+              wx.setStorageSync('name', res.data.OpenId.name)
               console.log(res)
               console.log(app.globalData.openid)
               that.setData({
@@ -114,6 +117,7 @@ Page({
                 success: function (res) {
                   if (res.confirm) {
                     console.log('用户点击确定')
+                    
                     wx.getStorage({
                       key: '登录状态',
                       success(res2) {
@@ -229,7 +233,21 @@ Page({
    */
   onHide: function () {
 
+  }, on22: function () {
+
+    wx.showModal({
+      content: '功能开发中，敬请期待！',
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
   },
+
+
+
 
   /**
    * 生命周期函数--监听页面卸载
