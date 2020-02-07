@@ -1,5 +1,6 @@
 // pages/bk/result.js
 var app = getApp();
+var list=[];
  var token = wx.getStorageSync('token');
 Page({
 
@@ -50,8 +51,13 @@ Page({
 
       },
       success(res) {
-
-        console.log(res)
+        console.log(list)
+        var i=0;
+        var list = that.data.list;
+        for (i = 0; i < res.data.SearchResult.numberOfElements; i++) {
+          list.push(res.data.SearchResult.content[i])
+        }
+        console.log(list)
         var count = res.data.SearchResult.totalElements
         console.log(app.globalData.page1)
         /*权限设置 */
@@ -59,7 +65,7 @@ Page({
         that.setData({
           count: count,
 
-          list: res.data.SearchResult.content,
+          list: list,
           search: app.globalData.search,
           page: app.globalData.page1,
           pgc: count / 20
@@ -96,7 +102,11 @@ Page({
 
       },
       success(res) {
-
+        var i = 0;
+        var list = that.data.list;
+        for (i = 0; i < res.data.SearchResult.numberOfElements; i++) {
+          list.push(res.data.SearchResult.content[i])
+        }
         console.log(res)
         var count = res.data.SearchResult.totalElements
         console.log(app.globalData.page1)
@@ -105,7 +115,7 @@ Page({
         that.setData({
           count: count,
 
-          list: res.data.SearchResult.content,
+          list: list,
           search: app.globalData.search,
           page: app.globalData.page1,
           pgc: count / 20
@@ -162,11 +172,16 @@ token:token,
           var count = res.data.SearchResult.totalElements
           console.log(app.globalData.page1)
           /*权限设置 */
-
+          var i = 0;
+          var list = that.data.list;
+          for (i = 0; i < res.data.SearchResult.numberOfElements; i++) {
+            list.push(res.data.SearchResult.content[i])
+          }
+        
           that.setData({
             count: count,
 
-            list: res.data.SearchResult.content,
+            list: list,
             search: app.globalData.search,
             page: app.globalData.page1,
             pgc: count / 20

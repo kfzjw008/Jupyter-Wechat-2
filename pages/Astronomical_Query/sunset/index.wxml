@@ -1,33 +1,34 @@
-  <view class="cu-bar bg-white">
-    <view class="action title-style-3">
-      <text class="text-xl   text-bold">日出日落查询</text>
-      <text class="text-Abc text-gray self-end margin-left-sm">Sunset</text>
-    </view>
-
+<view class="cu-bar bg-white">
+  <view class="action title-style-3">
+    <text class="text-xl   text-bold">日出日落查询</text>
+    <text class="text-Abc text-gray self-end margin-left-sm">Sunset</text>
   </view>
+
+</view>
 
 
 <view class='margin-sm bg-white padding-lg radius solid  '>
   <view class='text-content'>
-        <view >说明目前只支持所在地日出日落查询。</view>
-</view></view>
+    <view>说明目前只支持所在地日出日落查询。</view>
+  </view>
+</view>
 
 
-	<view class="cu-form-group ">
-		<view class="title">日期选择</view>
-		<picker mode="date" value="{{date}}" start="2020-01-01" end="2021-12-31" bindchange="DateChange">
-			<view class="picker">
-				{{date}}
-			</view>
-		</picker>
-	</view>
+<view class="cu-form-group ">
+  <view class="title">日期选择</view>
+  <picker mode="date" value="{{date}}" start="1200-01-01" end="3000-12-31" bindchange="DateChange">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+</view>
 
-  <view class='margin-xl  padding-xl radius shadow-lg'>
+<view class='margin-xl  padding-xl radius shadow-lg'>
   <view class='text-center margin-bottom text-lg  '>查询结果</view>
 
-  
+
   <view class='text-content '>
-  <view>日出时间：{{r}}</view>
+    <view>日出时间：{{r}}</view>
     <view>日落时间：{{s}}</view>
 
 

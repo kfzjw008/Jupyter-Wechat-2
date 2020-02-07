@@ -18,7 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.globalData.page1 = 1;
+    app.globalData.page1 = 0;
   },
 
   /**
@@ -33,23 +33,57 @@ Page({
     app.globalData.page1 = app.globalData.page1 + 1
     var pgc = app.globalData.page1
     wx.request({
-      url: 'https://api.majorbillliu.com/knowledge',
+      url: app.globalData.Main_Server + "/api/function/StarSearch",
       data: {
-        search: app.globalData.search,
+        string: app.globalData.search,
         page: app.globalData.page1
-      }, success(res) {
-        var count = res.data.count
-        var pgc = count / 15
-        //console.log(pgc)
+
+      },
+      success(res) {
+        var pgc = count / 10
+        var count = res.data.Result.count
+        var list = that.data.list;
+        console.log("结果：" + res.data.Result.Data1.bayer)
+        if (res.data.Result.Data1 != null) {
+          list.push(res.data.Result.Data1)
+        }
+        if (res.data.Result.Data2 != null) {
+          list.push(res.data.Result.Data2)
+        }
+        if (res.data.Result.Data3 != null) {
+          list.push(res.data.Result.Data3)
+        }
+        if (res.data.Result.Data14 != null) {
+          list.push(res.data.Result.Data4)
+        }
+        if (res.data.Result.Data5 != null) {
+          list.push(res.data.Result.Data5)
+        }
+        if (res.data.Result.Data6 != null) {
+          list.push(res.data.Result.Data6)
+        }
+        if (res.data.Result.Data7 != null) {
+          list.push(res.data.Result.Data7)
+        }
+        if (res.data.Result.Data8 != null) {
+          list.push(res.data.Result.Data8)
+        }
+        if (res.data.Result.Data9 != null) {
+          list.push(res.data.Result.Data9)
+        }
+        if (res.data.Result.Data10 != null) {
+          list.push(res.data.Result.Data10)
+        }
         that.setData({
-          count: res.data.count,
-          list: res.data.results,
+          count: count,
+          list: list,
           search: app.globalData.search,
           page: app.globalData.page1,
-          pgc: count / 15
+          pgc: count / 10
         })
-      }
 
+
+      }
     })
 
   }, nextpage2: function () {
@@ -59,23 +93,57 @@ Page({
     app.globalData.page1 = app.globalData.page1 - 1
     var pgc = app.globalData.page1
     wx.request({
-      url: 'https://api.majorbillliu.com/knowledge',
+      url: app.globalData.Main_Server + "/api/function/StarSearch",
       data: {
-        search: app.globalData.search,
+        string: app.globalData.search,
         page: app.globalData.page1
-      }, success(res) {
-        var count = res.data.count
-        var pgc = count / 15
-        //console.log(pgc)
+
+      },
+      success(res) {
+        var pgc = count / 10
+        var count = res.data.Result.count
+        var list = that.data.list;
+        console.log("结果：" + res.data.Result.Data1.bayer)
+        if (res.data.Result.Data1 != null) {
+          list.push(res.data.Result.Data1)
+        }
+        if (res.data.Result.Data2 != null) {
+          list.push(res.data.Result.Data2)
+        }
+        if (res.data.Result.Data3 != null) {
+          list.push(res.data.Result.Data3)
+        }
+        if (res.data.Result.Data14 != null) {
+          list.push(res.data.Result.Data4)
+        }
+        if (res.data.Result.Data5 != null) {
+          list.push(res.data.Result.Data5)
+        }
+        if (res.data.Result.Data6 != null) {
+          list.push(res.data.Result.Data6)
+        }
+        if (res.data.Result.Data7 != null) {
+          list.push(res.data.Result.Data7)
+        }
+        if (res.data.Result.Data8 != null) {
+          list.push(res.data.Result.Data8)
+        }
+        if (res.data.Result.Data9 != null) {
+          list.push(res.data.Result.Data9)
+        }
+        if (res.data.Result.Data10 != null) {
+          list.push(res.data.Result.Data10)
+        }
         that.setData({
-          count: res.data.count,
-          list: res.data.results,
+          count: count,
+          list: list,
           search: app.globalData.search,
           page: app.globalData.page1,
-          pgc: count / 15
+          pgc: count / 10
         })
-      }
 
+
+      }
     })
 
   },
@@ -98,7 +166,7 @@ Page({
     wx.showToast({
       title: '搜索中',
       icon: 'loading',
-      duration: 6000
+      duration: 2000
     }),
       // app.globalData.page1=1,
 
@@ -111,68 +179,52 @@ Page({
 
         },
         success(res) {
-          var count = res.data.count
-          var y = res.data.Result.year
-          var m = res.data.Result.month
-          var d = res.data.Result.day
-          var moon = res.data.Result.phase
-          var src = res.data.Result.phasePNG
-          try {
-            wx.setStorageSync('MOON', res.data.Result)
-          } catch (e) { }
-          that.setData({
-            src: src,
-            y: y,
-            m: m,
-            d: d,
-            moon: moon
-          })
-
-
-        }
-      })
-      wx.request({
-        url: 'https://api.majorbillliu.com/knowledge',
-        data: {
-          search: app.globalData.search,
-          page: app.globalData.page1-1,
-        },
-        fail(res) {
-          //console.log(res)
-          wx.showToast({
-            title: '加载失败',
-            icon: "none",
-            duration: 2000
-          })
-
-        },
-        success(res) {
-
-          //console.log(res)
-          wx.showToast({
-            title: '加载成功',
-            icon: 'success',
-            duration: 2000
-          })
-          var count = res.data.count
-
-
-
-
-          //console.log(app.globalData.page1)
-
+          var pgc = count / 10
+          var count = res.data.Result.count
+          var list = that.data.list;
+          console.log("结果："+res.data.Result.Data1.bayer)
+          if (res.data.Result.Data1!=null){
+            list.push(res.data.Result.Data1)
+          }
+          if (res.data.Result.Data2 != null) {
+            list.push(res.data.Result.Data2)
+          }
+          if (res.data.Result.Data3 != null) {
+            list.push(res.data.Result.Data3)
+          }
+          if (res.data.Result.Data14 != null) {
+            list.push(res.data.Result.Data4)
+          }
+          if (res.data.Result.Data5 != null) {
+            list.push(res.data.Result.Data5)
+          }
+          if (res.data.Result.Data6 != null) {
+            list.push(res.data.Result.Data6)
+          }
+          if (res.data.Result.Data7 != null) {
+            list.push(res.data.Result.Data7)
+          }
+          if (res.data.Result.Data8 != null) {
+            list.push(res.data.Result.Data8)
+          }
+          if (res.data.Result.Data9 != null) {
+            list.push(res.data.Result.Data9)
+          }
+          if (res.data.Result.Data10 != null) {
+            list.push(res.data.Result.Data10)
+          }
           that.setData({
             count: count,
-            list: res.data.results,
+            list: list,
             search: app.globalData.search,
             page: app.globalData.page1,
-            pgc: count / 15
+            pgc: count / 10
           })
-          var count = res.data.count
-          var pgc = count / 15
-          //console.log(pgc)
+
+
         }
       })
+
 
 
 

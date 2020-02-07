@@ -45,11 +45,6 @@
   </view>
 
 
-   <view class="weui-loadmore" hidden="{{hidden}}" bindchange="loadingChange">
-            <view class="weui-loading"></view>
-            <view class="weui-loadmore__tips">正在加载</view>
-        </view>
-
   </scroll-view>
 
 

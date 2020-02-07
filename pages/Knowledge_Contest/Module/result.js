@@ -41,22 +41,19 @@ var loadMore = function (that) {
       success(res) {
 
         //console.log(res)
-
-
+        var i = 0;
         var list = that.data.list;
+        for (i = 0; i < res.data.ModuleExercisesDetails.numberOfElements; i++) {
+          list.push(res.data.ModuleExercisesDetails.content[i])
+        }
+
+     
        length = res.data.ModuleExercisesDetails.numberOfElements;
         /*     以下为未认证受限代码 */
         //if (app.globalData.rz == 0)length=1
         //if (app.globalData.rz == 2)length=2
         //console.log('插入？？？？？')
         //console.log(that.data.list)
-        for (var i = 0; i < length; i++) {
-          list.push(res.data.ModuleExercisesDetails.content[i]);
-          console.log('插入！！！！！！！！')
-
-          console.log(list.length)
-          //console.log(res.data.ModuleExercisesDetails.content[i])
-        }
         app.globalData.page1 = app.globalData.page1 + 1;
         //console.log(list)
 
@@ -127,10 +124,7 @@ Page({
     });
   },
   topLoad: function (event) {
-    //   该方法绑定了页面滑动到顶部的事件，然后做上拉刷新
 
-    loadMore(this);
-    //console.log("lower");
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

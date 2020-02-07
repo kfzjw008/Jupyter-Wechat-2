@@ -1,2 +1,66 @@
-<!--pages/Astronomical_Query/StellarQuery/detail/index.wxml-->
-<text>pages/Astronomical_Query/StellarQuery/detail/index.wxml</text>
+    <view class="cu-bar bg-white">
+    <view class="action title-style-3">
+      <text class="text-xl text-bold">恒星详细信息</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Detail</text>
+    </view>
+ </view>
+
+
+
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''>
+
+
+
+  <view class="cu-item" > 
+      <text class='text-grey' style='text-align:left'>名称</text> <text  class='text-xl text-bold text-grey'  style='text-align:right'>{{Name111}}</text>
+  </view>
+
+  <view class="cu-item">
+  <text class='text-grey' style='text-align:left'>中国传统星名</text> <text  class='text-grey' style='text-align:right;'>{{Ancient_Chinese_Name}}</text> 
+  </view>
+
+  <view class="cu-item ">
+  <text class='text-grey ' style='text-align:left'>所属星座</text> <text   class='text-grey'  style='text-align:right;'>{{Constellation111}}</text>
+  </view>
+
+    <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>拜耳命名</text> <text   class='text-grey'  style='text-align:right;'>{{Bayer111}}</text>
+  </view>
+    <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>弗兰斯蒂德命名</text> <text  class='text-grey'  style='text-align:right;'>{{Fransted111}}</text>
+  </view>
+    <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>变星命名</text> <text  class='text-gray'  style='text-align:right'>{{Variable_star111}}</text>
+  </view>
+    <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>亨利·德雷伯星表</text> <text   class='text-grey'  style='text-align:right;'>{{HD111}}</text>
+  </view>
+      <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>依巴谷星表</text> <text  class='text-gray'  style='text-align:right'>{{HIP111}}</text>
+  </view>
+        <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>赤经</text> <text  class='text-gray'  style='text-align:right'>{{Right_ascension111}}</text>
+  </view>
+        <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>赤纬</text> <text  class='text-gray'  style='text-align:right'>{{Declination111}}</text>
+  </view>
+          <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>视星等</text> <text  class='text-gray'  style='text-align:right'>{{Apparent_magnitude111}}</text>
+  </view>
+          <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>绝对星等</text> <text  class='text-gray'  style='text-align:right'>{{Absolute_magnitude111}}</text>
+  </view>
+          <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>距离</text> <text  class='text-gray'  style='text-align:right'>{{Distance111}}光年</text>
+  </view>
+          <view class="cu-item ">
+  <text class='text-grey' style='text-align:left'>恒星分类</text> <text  class='text-gray'  style='text-align:right'>{{Classification111}}</text>
+  </view>
+
+   </view>
+    		<view class='cu-btn bg-blue lg block shadow radius margin-xl'    bindtap='nextpage' data-target="viewModal">
+					返回
+				</view>
+<ad unit-id="adunit-ff500eca88b6df8a"></ad>
+

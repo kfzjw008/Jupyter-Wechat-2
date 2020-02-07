@@ -34,11 +34,12 @@
   </view>
 
   </view>
+  <!--
   		<view class='cu-btn bg-blue lg block shadow radius margin-xl'wx:if="{{count>15&&page>1}}"  bindtap='nextpage2' data-target="viewModal">
 				上一页
-				</view>
+				</view>-->
         		<view class='cu-btn bg-blue lg block shadow radius margin-xl'  wx:if="{{count>15&&page<pgc}}"  bindtap='nextpage' data-target="viewModal">
-					下一页
+				加载更多
 				</view>
 
 
