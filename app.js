@@ -1,4 +1,5 @@
 //app.js
+
 App({
   onLaunch: function() {
 
@@ -101,6 +102,8 @@ App({
     }
 
 
+  }, jf: function () {
+  
   },
   globalData: {
     userInfo: null,
@@ -126,5 +129,6 @@ App({
     csscore:0,
     tzjsq:1,
     tzjsqsave:0,
+    jfqs:0
   }
 })

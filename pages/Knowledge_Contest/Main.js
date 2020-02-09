@@ -184,6 +184,24 @@ Page({
 
   },
   onLoad: function (options) {
+    var that = this
+    wx.getStorage({
+      key: '登录状态',
+      success(res2) {
+        if (res2.data == 2) {
+          console.log(666)
+          that.setData({
+            islogin: false,
+          })
+        } else {
+          console.log(66666)
+          console.log(res2)
+          that.setData({
+            islogin: true,
+          })
+        }
+      }
+    })
     // 在页面onLoad回调事件中创建插屏广告实例
     if (wx.createInterstitialAd) {
       interstitialAd = wx.createInterstitialAd({
@@ -204,7 +222,37 @@ Page({
         console.error(err)
       })
     }
-  },
+  }, onShareAppMessage: function () {
+    var that = this
+    var token = wx.getStorageSync('token')
+    var openid = wx.getStorageSync('openid')
+    wx.request({
+      url: app.globalData.Main_Server + "/api/user/AddIntergal",
+      data: {
+        count: 8,
+        name: "分享积分",
+        token: token,
+        openid: openid
+
+      },
+      fail(res) {
+        //console.log(res)
+        wx.showModal({
+          content: '分享失败，请稍后重试！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+
+            }
+          }
+        })
+      },
+      success(res) {
+      }
+    })
+
+  }
 
 
 

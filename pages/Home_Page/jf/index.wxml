@@ -1,2 +1,95 @@
-<!--pages/Home_Page/jf/index.wxml-->
-<text>pages/Home_Page/jf/index.wxml</text>
+<view class='UCenter-bg' style="background-image: url(https://www.jishestudio.com/jupyteradmin/images/index2.jpg);">
+  <view class='space'>
+    <view class="stars ">
+      <view class="star "></view>
+      <view class="star pink "></view>
+      <view class="star blue "></view>
+      <view class="star yellow "></view>
+    </view>
+  </view>
+  <view class='margin-top-sm' style='margin-bottom:50px'>
+    <text style='font-size:15px ;color:#ffffff;text-align:center;line-height:0.6em;'>总积分</text>
+  </view>
+  <text style='font-size:100px ;color:#ffffff;padding:0rpx;line-height:0.95em;'>{{all}}</text>
+
+</view>
+
+<view class='margin-sm bg-white padding-lg radius solid  '>
+  <view class='text-content'>
+    <view>积分规则：</view>
+    <view>1、签到积分：每日签到积分+3分。</view>
+    <view>2、练习积分：每日练习题目数每5题积分+1，每日上限50分。</view>
+    <view>3、连对积分：挑战模式连对5题积分+10，连对10题再加10，每日上限20分。</view>
+    <view>4、分享积分：分享小程序一次+8分，每日上限3次。</view>
+  </view>
+</view>
+
+
+
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg" style=''>
+  <view class="cu-item " style='min-height:90rpx'>
+        <view class="content">
+        <text class="cuIcon-calendar text-blue"></text>
+        <text class="text-grey">当日积分</text>
+         
+      </view>
+         <text class='text-grey' style='text-align:right'>{{allt}}分</text>
+      <view class="action">
+      </view>
+  </view>
+  <view class="cu-item " style='min-height:90rpx'>
+        <view class="content">
+        <text class="cuIcon-roundcheck text-blue"></text>
+        <text class="text-grey">签到积分</text>
+         
+      </view>
+         <text class='text-grey' style='text-align:right'>当日已获得{{a1}}分</text>
+      <view class="action">
+        <button class="cu-btn lines-blue  shadow"  bindtap='on221' disabled='{{!b1}}'>
+           立即签到</button>
+      </view>
+  </view>
+
+   <view class="cu-item " style='min-height:90rpx'>
+        <view class="content">
+        <text class="cuIcon-form text-blue"></text>
+        <text class="text-grey">练习积分</text>
+         
+      </view>
+         <text class='text-grey' style='text-align:right'>当日已获得{{a2}}分</text>
+      <view class="action">
+        <button class="cu-btn lines-blue  shadow" bindtap='on222'  disabled='{{!b2}}'>
+           获取积分</button>
+      </view>
+  </view>
+   <view class="cu-item " style='min-height:90rpx'>
+        <view class="content">
+        <text class="cuIcon-top text-blue"></text>
+        <text class="text-grey">连对积分</text>
+         
+      </view>
+         <text class='text-grey' style='text-align:right'>当日已获得{{a3}}分</text>
+      <view class="action">
+        <button class="cu-btn lines-blue  shadow" bindtap='on223' disabled='{{!b3}}'>
+           获取积分</button>
+      </view>
+  </view>
+    <view class="cu-item " style='min-height:90rpx'>
+        <view class="content">
+        <text class="cuIcon-share text-blue"></text>
+        <text class="text-grey">分享积分</text>
+         
+      </view>
+         <text class='text-grey' style='text-align:right'>当日已获得{{a4}}分</text>
+      <view class="action">
+        <button class="cu-btn lines-blue  shadow"  bindtap='on224' disabled='{{!b4}}'>
+           获取积分</button>
+      </view>
+  </view>
+
+
+</view>
+  <button  class='cu-btn bg-blue lg block shadow radius margin-xl'  lang="zh_CN"    bindtap='on225'    >查看积分排行</button>
+<!-- 广告代码，后期用于流量主  -->
+<ad unit-id="adunit-47419d0a0aa17c4c" ad-intervals="30"></ad>

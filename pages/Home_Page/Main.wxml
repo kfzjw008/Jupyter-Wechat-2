@@ -51,7 +51,7 @@
 
     <view class="cu-item arrow" style='min-height:90rpx'>
       <navigator class="content"  url="Information/index" >
-        <text class="cuIcon-post  text-grey"></text>
+        <text class="cuIcon-post  text-blue"></text>
         <text class="text-grey">修改资料</text>
       </navigator>
 
@@ -82,8 +82,8 @@
     </view>
 
     <view class="cu-item arrow" style='min-height:90rpx'>
-      <navigator class="content" bindtap='on22' hover-class="none">
-        <text class="cuIcon-rank text-blue"></text>
+      <navigator class="content" url="jf/index"  hover-class="none">
+        <text class="cuIcon-choiceness text-blue"></text>
         <text class="text-grey">我的积分</text>
       </navigator>
  
@@ -101,7 +101,7 @@
 
      <view class="cu-item arrow" style='min-height:90rpx'>
       <navigator class="content" url="more/index" hover-class="none">
-        <text class="cuIcon-settings  text-gray"></text>
+        <text class="cuIcon-settings  text-blue"></text>
         <text class="text-grey">设置与反馈</text>
       </navigator>
      
@@ -114,7 +114,7 @@
 
      <view class="cu-item arrow" style='min-height:90rpx'>
       <navigator class="content" url="question/index" hover-class="none">
-        <text class="cuIcon-question text-red"></text>
+        <text class="cuIcon-question text-blue"></text>
         <text class="text-grey">常见问题</text>
       </navigator>
     </view>

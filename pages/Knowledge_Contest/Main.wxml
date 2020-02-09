@@ -70,9 +70,9 @@
       <text>练习记录</text>
       </navigator>
     </view>
-<!--
+
        <view class="cu-item " hidden="true" >
-    <navigator url="rz/index">
+    <navigator url="../Home_Page/jf/index">
       <view class="cuIcon-profilefill text-blue ">
         <view class="cu-tag badge " >
           <block >新</block>
@@ -80,7 +80,7 @@
       </view>
       <text>我的积分</text>
       </navigator>
-    </view>-->
+    </view>
 
    <view class="cu-item " hidden="true" >
     <navigator url="ranklist/index">

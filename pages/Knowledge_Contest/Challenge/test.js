@@ -155,6 +155,34 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    var that = this
+    var token = wx.getStorageSync('token')
+    var openid = wx.getStorageSync('openid')
+    wx.request({
+      url: app.globalData.Main_Server + "/api/user/AddIntergal",
+      data: {
+        count: 8,
+        name: "分享积分",
+        token: token,
+        openid: openid
+
+      },
+      fail(res) {
+        //console.log(res)
+        wx.showModal({
+          content: '分享失败，请稍后重试！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+
+            }
+          }
+        })
+      },
+      success(res) {
+      }
+    })
 
   },
   gotoPage3: function () {
@@ -174,6 +202,27 @@ Page({
 
       },
       success(res) {
+        app.globalData.jfqs++
+        if (app.globalData.jfqs % 5 == 0) {
+          var token = wx.getStorageSync('token')
+          var openid = wx.getStorageSync('openid')
+          wx.request({
+            url: app.globalData.Main_Server + "/api/user/AddIntergal",
+            data: {
+              count: 1,
+              name: "练习积分",
+              token: token,
+              openid: openid
+
+            },
+            fail(res) {
+              //console.log(res)
+            },
+            success(res) {
+            }
+          })
+
+        }
         console.log(res)
         console.log("成功上传答题数据")
       }
@@ -189,7 +238,26 @@ Page({
     if (app.globalData.Correct_Answer == 'A') {
       console.log(app.globalData.Correct_Answer)
       app.globalData.tzjsq++
+      if (app.globalData.tzjsq == 5 || app.globalData.tzjsq==10) {
+        var token = wx.getStorageSync('token')
+        var openid = wx.getStorageSync('openid')
+        wx.request({
+          url: app.globalData.Main_Server + "/api/user/AddIntergal",
+          data: {
+            count: 10,
+            name: "挑战积分",
+            token: token,
+            openid: openid
 
+          },
+          fail(res) {
+            //console.log(res)
+          },
+          success(res) {
+          }
+        })
+
+      }
       that.setData({
         inputShoweda1: false,
         inputShoweda3: true,
@@ -271,6 +339,27 @@ Page({
 
       },
       success(res) {
+        app.globalData.jfqs++
+        if (app.globalData.jfqs % 5 == 0) {
+          var token = wx.getStorageSync('token')
+          var openid = wx.getStorageSync('openid')
+          wx.request({
+            url: app.globalData.Main_Server + "/api/user/AddIntergal",
+            data: {
+              count: 1,
+              name: "练习积分",
+              token: token,
+              openid: openid
+
+            },
+            fail(res) {
+              //console.log(res)
+            },
+            success(res) {
+            }
+          })
+
+        }
         console.log(res)
         console.log("成功上传答题数据")
       }
@@ -296,7 +385,26 @@ Page({
     }
     else if (app.globalData.Correct_Answer == 'B') {
       app.globalData.tzjsq++
+      if (app.globalData.tzjsq == 5 || app.globalData.tzjsq == 10) {
+        var token = wx.getStorageSync('token')
+        var openid = wx.getStorageSync('openid')
+        wx.request({
+          url: app.globalData.Main_Server + "/api/user/AddIntergal",
+          data: {
+            count: 10,
+            name: "挑战积分",
+            token: token,
+            openid: openid
 
+          },
+          fail(res) {
+            //console.log(res)
+          },
+          success(res) {
+          }
+        })
+
+      }
       that.setData({
         inputShoweda1: false,
         inputShoweda2: true,
@@ -362,6 +470,27 @@ Page({
 
       },
       success(res) {
+        app.globalData.jfqs++
+        if (app.globalData.jfqs % 5 == 0) {
+          var token = wx.getStorageSync('token')
+          var openid = wx.getStorageSync('openid')
+          wx.request({
+            url: app.globalData.Main_Server + "/api/user/AddIntergal",
+            data: {
+              count: 1,
+              name: "练习积分",
+              token: token,
+              openid: openid
+
+            },
+            fail(res) {
+              //console.log(res)
+            },
+            success(res) {
+            }
+          })
+
+        }
         console.log(res)
         console.log("成功上传答题数据")
       }
@@ -405,6 +534,26 @@ Page({
     else if (app.globalData.Correct_Answer == 'C') {
 
       app.globalData.tzjsq++
+      if (app.globalData.tzjsq == 5 || app.globalData.tzjsq == 10) {
+        var token = wx.getStorageSync('token')
+        var openid = wx.getStorageSync('openid')
+        wx.request({
+          url: app.globalData.Main_Server + "/api/user/AddIntergal",
+          data: {
+            count: 10,
+            name: "挑战积分",
+            token: token,
+            openid: openid
+
+          },
+          fail(res) {
+            //console.log(res)
+          },
+          success(res) {
+          }
+        })
+
+      }
       console.log(3)
       that.setData({
         inputShoweda1: false,
@@ -453,6 +602,27 @@ Page({
 
       },
       success(res) {
+        app.globalData.jfqs++
+        if (app.globalData.jfqs % 5 == 0) {
+          var token = wx.getStorageSync('token')
+          var openid = wx.getStorageSync('openid')
+          wx.request({
+            url: app.globalData.Main_Server + "/api/user/AddIntergal",
+            data: {
+              count: 1,
+              name: "练习积分",
+              token: token,
+              openid: openid
+
+            },
+            fail(res) {
+              //console.log(res)
+            },
+            success(res) {
+            }
+          })
+
+        }
         console.log(res)
         console.log("成功上传答题数据")
       }
@@ -512,6 +682,26 @@ Page({
     else if (app.globalData.Correct_Answer == 'D') {
 
       app.globalData.tzjsq++
+      if (app.globalData.tzjsq == 5 || app.globalData.tzjsq == 10) {
+        var token = wx.getStorageSync('token')
+        var openid = wx.getStorageSync('openid')
+        wx.request({
+          url: app.globalData.Main_Server + "/api/user/AddIntergal",
+          data: {
+            count: 10,
+            name: "挑战积分",
+            token: token,
+            openid: openid
+
+          },
+          fail(res) {
+            //console.log(res)
+          },
+          success(res) {
+          }
+        })
+
+      }
       console.log(4)
       that.setData({
         inputShoweda1: false,

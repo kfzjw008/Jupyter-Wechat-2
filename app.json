@@ -51,7 +51,8 @@
     "navigationBarTitleText": "星云村",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#FFFFFF",
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": false,
+    "withShareTicket": true
   },
   "networkTimeout": {
     "request": 10000,

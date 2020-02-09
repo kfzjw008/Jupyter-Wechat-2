@@ -2,6 +2,8 @@
 // 在页面onLoad回调事件中创建插屏广告实例
 let interstitialAd = null
 var app = getApp();
+var p=100;
+var city="北京";
 Page({
 
   /**
@@ -140,6 +142,8 @@ Page({
               console.log(res.data.SAO_Result.P0)
               var P0 = res.data.SAO_Result.P0.SAO
               app.globalData.inp = 0
+              p = res.data.SAO_Result.P0.SAO
+              city = res.data.SAO_Result.City
               that.setData({
                 isLoad: true,
                 P0: res.data.SAO_Result.P0.SAO,
@@ -269,8 +273,38 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
+    var that = this
+    var token = wx.getStorageSync('token')
+    var openid = wx.getStorageSync('openid')
+    wx.request({
+      url: app.globalData.Main_Server + "/api/user/AddIntergal",
+      data: {
+        count: 8,
+        name: "分享积分",
+        token: token,
+        openid: openid
 
+      },
+      fail(res) {
+        //console.log(res)
+        wx.showModal({
+          content: '分享失败，请稍后重试！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+
+            }
+          }
+        })
+      },
+      success(res) {
+      }
+    })
+    return {
+      title: '今天'+city+"的天文观测适宜度达到了"+p+"!晚上一起看星星吧！",
+    }
   },
   gotoPage1: function() {
       wx.navigateTo({
