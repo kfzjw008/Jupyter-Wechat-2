@@ -265,7 +265,7 @@ Page({
       data: {
         token: token,
         openid: openid,
-        source: "随机练习",
+        source: "在线测试",
         id: id,
         answer: "A"
 
@@ -390,7 +390,7 @@ Page({
       data: {
         token: token,
         openid: openid,
-        source: "随机练习",
+        source: "在线测试",
         id: id,
         answer: "B"
 
@@ -509,7 +509,7 @@ Page({
       data: {
         token: token,
         openid: openid,
-        source: "随机练习",
+        source: "在线测试",
         id: id,
         answer: "C"
 
@@ -628,7 +628,7 @@ Page({
       data: {
         token: token,
         openid: openid,
-        source: "随机练习",
+        source: "在线测试",
         id: id,
         answer: "D"
 
