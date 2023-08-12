@@ -1,0 +1,51 @@
+<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+<view class="cu-chat"  wx:key wx:for='{{duihua}}' wx:for-index="ind">
+
+  <view class="cu-info round" wx:if='{{ind==0}}' id='m-{{item.ind}}' >欢迎参与和智能小星的对话！!你可以尝试向智能小星提出天文问题，尝试得到智能小星的回答嗷！</view>
+  <view class="cu-item"   wx:if='{{item.mytalk=="0"}}' id='m-{{item.ind}}'  >
+    <view class="cu-avatar radius" style="background-image:url(https://www.jishestudio.com/images/jupyter.png);"></view>
+    <view class="main">
+      <view class="content shadow">
+        <view class='title'>{{item.message}}</view>
+      </view>
+    </view>
+
+    <view class="date ">{{item.date}}</view>
+  </view>
+
+
+  <view class="cu-item self" wx:if='{{item.mytalk=="1"}}' id='m-{{item.index}}' >
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text class='title'>{{item.message}}</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(https://www.jishestudio.com/images/yh.jpg);"></view>
+    <view class="date">{{item.date}}</view>
+  </view>
+
+  <!--
+  <view class="cu-info round">对方撤回一条消息!</view>
+
+
+
+  <view class="cu-info">
+    <text class="cuIcon-roundclosefill text-red "></text> 对方拒绝了你的消息
+  </view>
+  <view  class="cu-info">
+    对方开启了好友验证，你还不是他(她)的好友。请先发送好友验证请求，对方验证通过后，才能聊天。
+    <text class="text-blue">发送好友验证</text>
+  </view>
+-->
+</view>
+</scroll-view>
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" placeholder="输入对话内容" bindinput="inputTyping" value="{{searchinput}}"></input>
+  <view class="action">
+    <text class="cuIcon-notificationfill text-blue"></text>
+  </view>
+  <button class="cu-btn bg-green shadow" bindtap="anniu" >发送</button>
+</view>

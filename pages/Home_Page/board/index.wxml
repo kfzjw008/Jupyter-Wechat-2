@@ -1,5 +1,5 @@
    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
-          class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+          class="list" bindscrolltolower="bindDownLoad"   bindscroll="scroll">
   
   <view class="cu-bar bg-white">
     <view class="action title-style-3">

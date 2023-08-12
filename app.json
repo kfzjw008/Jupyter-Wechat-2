@@ -38,7 +38,8 @@
     "pages/Home_Page/Information/index",
     "pages/Home_Page/rz/index",
     "pages/Home_Page/jf/index",
-    "pages/Home_Page/board/index"
+    "pages/Home_Page/board/index",
+    "pages/znxx/znxx"
   ],
   "permission": {
     "scope.userLocation": {

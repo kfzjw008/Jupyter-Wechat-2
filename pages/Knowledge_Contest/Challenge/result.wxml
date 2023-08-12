@@ -17,7 +17,9 @@
 
 
   <view class="cu-item" > 
-      <text class='text-grey' style='text-align:left'>用户昵称</text> <text  class='text-grey'  style='text-align:right'><open-data type="userNickName" lang="zh_CN"></open-data> </text>
+      <text class='text-grey' style='text-align:left'>用户昵称</text> <view  class='text-grey'  style='text-align:right'>
+      <open-data type="userNickName"></open-data>
+       </view>
   </view>
 
 

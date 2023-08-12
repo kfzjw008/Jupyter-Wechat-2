@@ -60,7 +60,7 @@ Page({
     wx.getLocation({
       type: 'wgs84',
       success: function(res) {
-        //console.log(res)
+        console.log("66666!")
         app.globalData.LAT = res.latitude
         app.globalData.LON = res.longitude
         that.setData({

@@ -24,7 +24,7 @@
       <text>恒星查询</text>
       </navigator>
     </view>
-
+<!--
     <view class="cu-item" >
     <navigator url="moon/index">
       <view class="cuIcon-global text-blue">
@@ -35,7 +35,7 @@
       <text>月球月相</text>
       </navigator>
     </view>
-
+-->
   <view class="cu-item" >
     <navigator url="planet/index">
       <view class="cuIcon-discover text-orange">

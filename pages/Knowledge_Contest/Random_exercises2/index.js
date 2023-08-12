@@ -298,10 +298,10 @@ if(bubian!=666){
     var token = wx.getStorageSync('token')
 if(yihuoqu!=666){
    wx.request({
-      url: app.globalData.Main_Server + "/api/question/RandomGetQuestion",
+      url: app.globalData.Main_Server + "/api/question/GetQuestion",
       data: {
         token: token,
-
+id:tzid
       },
       fail(res) {
         console.log(res)
@@ -905,6 +905,6 @@ if(yihuoqu!=666){
   gotoPage2: function () {
 
     var that = this
-    wx.redirectTo({ url: 'index', })
+   wx.switchTab({ url: '/pages/Realtime_Data/Main', })
   }
 })

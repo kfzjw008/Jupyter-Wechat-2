@@ -84,7 +84,7 @@
 
 <ad unit-id="30d048f49099dd8449bad62aa1c1fb4c" ad-intervals="30"></ad>
        	<view class='cu-btn bg-blue lg block shadow radius margin-xl'   data-target="viewModal" wx:if="{{inputShoweda1==false}}" bindtap="gotoPage2"  disabled="{{dis}}">
-	下一题
+	回到主页
 				</view>
 
 

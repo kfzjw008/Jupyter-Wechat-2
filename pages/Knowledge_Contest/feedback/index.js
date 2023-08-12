@@ -56,50 +56,105 @@ Page({
     var that = this
     var name = wx.getStorageSync('nickname')
     var token = wx.getStorageSync('token')
-    wx.request({
-      url: app.globalData.Main_Server + "/api/user/feedback",
-      data: {
-        token: token,
-        title:title,
-        content:content,
-        name:name,
-        tel:tel,
-        questionnumber:app.globalData.id
+    if ((title == null || title.trim() == "") || (content == null || content.trim() == "")) {
+      wx.showModal({
+        content: '请输入反馈主题和内容！',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      })
+    } else {
 
-      },
-      fail(res) {
-        console.log(res)
-        wx.showToast({
-          title: '反馈失败,请稍后重试',
-          icon: "none",
-          duration: 2000
-        })
+      wx.request({
 
-      },
-      success(res) {
-        console.log(res.data)
-        wx.showToast({
-          title: '反馈成功',
-          icon: "none",
-          duration: 2000
-        })
-      }
+        url: "https://www.jishestudio.com/ywsc/api/tools/wb",
+        data: {
+          word: name + content
+        },
+        success(res) {
+          if (res.data.result == false) {
+            wx.showModal({
+              content: '请输入合法的反馈主题和内容！',
+              showCancel: false,
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                }
+              }
+            })
 
-    })
+          } else {
+
+            //请求
+            wx.getStorage({
+              key: 'openid',
+              success(res2) {
+                console.log(res2.data)
+
+                wx.request({
+                  url: app.globalData.Main_Server + "/api/user/feedback",
+                  data: {
+                    token: token,
+                    title: title,
+                    content: content,
+                    name: name,
+                    tel: tel,
+                    questionnumber: app.globalData.id
+
+                  },
+                  fail(res) {
+                    console.log(res)
+                    wx.showToast({
+                      title: '反馈失败,请稍后重试',
+                      icon: "none",
+                      duration: 2000
+                    })
+
+                  },
+                  success(res) {
+                    console.log(res.data)
+                    wx.showToast({
+                      title: '反馈成功',
+                      icon: "none",
+                      duration: 2000
+                    })
+                    wx.navigateBack({
+                      delta: 1,
+
+                    })
+                  }
+
+
+                })
+              }
+            })
+
+
+          }
+
+        }
+      })
 
 
 
-    wx.navigateBack({
-      delta: 1,
 
-    })
+    }
+
+
+
+
+ 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    title="";
+    content = "";
   },
 
   /**
