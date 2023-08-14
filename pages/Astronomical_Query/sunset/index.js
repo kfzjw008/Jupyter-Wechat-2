@@ -34,7 +34,7 @@ Page({
     r:"加载中",
     s:"加载中"
   }, DateChange(e) {
-
+/*
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -46,7 +46,7 @@ Page({
           lat: app.globalData.LAT,
         })
       }
-    })
+    })*/
     this.setData({
       date: e.detail.value
     })
@@ -96,7 +96,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+/*
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
@@ -108,7 +108,7 @@ Page({
           lat: app.globalData.LAT,
         })
       }
-    })
+    })*/
     var that = this
 
     console.log(getToday())

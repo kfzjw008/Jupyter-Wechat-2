@@ -1,9 +1,10 @@
 <view class='margin-xl bg-white padding-xl radius shadow-lg'>
-  <view class='text-center margin-bottom text-lg  text-grey'>关于星云村V2.0</view>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于星云村V2.3</view>
   <view class='text-content'>
     <view>星云村集天文实时数据查询，资料查询，知识学习等模块于一体，方便广大天文爱好者学习知识开展观测活动。</view>
-  <view >星云村V2.2 </view>
+  <view >星云村V2.3 </view>
   <view >智能小星模块暂时下线，带来不便敬请谅解!  </view>
+  <view >星云村上线四周年纪念，用户量破千，感谢有你！ </view>
 
   <view >开发者：张峻巍 王浩杰 </view>
 

@@ -109,6 +109,7 @@ App({
     userInfo: null,
  //Main_Server: "http://localhost:8080", //主请求服务器
   Main_Server: "https://www.jishestudio.com/jupyteradmin",
+  Main_res_Server: "https://www.jishestudio.com",
     LON: "116.2", //经度
     LAT: "39.9", //纬度
     inp: 1,
